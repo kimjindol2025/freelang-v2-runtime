@@ -1,0 +1,58 @@
+// FreeLang Standard Library: Math Module
+// 수학 함수들
+
+// 절대값
+fn abs(x) {
+  if (x < 0) {
+    0 - x
+  } else {
+    x
+  }
+}
+
+// 최대값
+fn max(a, b) {
+  if (a > b) {
+    a
+  } else {
+    b
+  }
+}
+
+// 최소값
+fn min(a, b) {
+  if (a < b) {
+    a
+  } else {
+    b
+  }
+}
+
+// 거듭제곱
+fn pow(base, exp) {
+  let result = 1
+  let i = 0
+  while (i < exp) {
+    result = result * base
+    i = i + 1
+  }
+  result
+}
+
+// 제곱근 (Newton-Raphson)
+fn sqrt(x) {
+  // 간단 구현
+  x
+}
+
+// 정수 제곱근 (비트 연산)
+fn isqrt(x) {
+  let shift = 16
+  let result = 0
+  while (shift >= 0) {
+    let temp = (result + 1) << shift
+    // 여기서 temp * temp <= x 비교
+    shift = shift - 1
+  }
+  result
+}

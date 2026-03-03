@@ -1,0 +1,111 @@
+@minimal
+fn freelang_codegen
+input: array<string>
+output: string
+intent: "본체 토큰 배열을 IR instruction으로 변환"
+{
+  let pos = 0;
+  let len_tokens = length(input);
+  let ir_list = [];
+  let error_msg = "";
+
+  // ── 토큰 순회: IR 생성 ──────────────────
+
+  while pos < len_tokens {
+    let token = charAt(input, pos);
+
+    // 숫자: PUSH 생성
+    let is_digit = token >= "0" and token <= "9";
+    if is_digit {
+      let ir_push = "{\"op\":\"PUSH\",\"arg\":";
+      ir_push = ir_push + token;
+      ir_push = ir_push + "}";
+      push(ir_list, ir_push);
+      pos += 1;
+      continue;
+    }
+
+    // return: RET 생성
+    if token == "return" {
+      let ir_ret = "{\"op\":\"RET\"}";
+      push(ir_list, ir_ret);
+      pos += 1;
+      continue;
+    }
+
+    // 산술 연산자
+    if token == "+" {
+      let ir_add = "{\"op\":\"ADD\"}";
+      push(ir_list, ir_add);
+      pos += 1;
+      continue;
+    }
+
+    if token == "-" {
+      let ir_sub = "{\"op\":\"SUB\"}";
+      push(ir_list, ir_sub);
+      pos += 1;
+      continue;
+    }
+
+    if token == "*" {
+      let ir_mul = "{\"op\":\"MUL\"}";
+      push(ir_list, ir_mul);
+      pos += 1;
+      continue;
+    }
+
+    if token == "/" {
+      let ir_div = "{\"op\":\"DIV\"}";
+      push(ir_list, ir_div);
+      pos += 1;
+      continue;
+    }
+
+    // let 변수 할당: STORE 생성
+    if token == "let" {
+      pos += 1;  // let 건너뛰기
+      if pos < len_tokens {
+        let var_name = charAt(input, pos);
+        pos += 1;
+        if pos < len_tokens and charAt(input, pos) == "=" {
+          pos += 1;  // = 건너뛰기
+          let ir_store = "{\"op\":\"STORE\",\"arg\":\"";
+          ir_store = ir_store + var_name;
+          ir_store = ir_store + "\"}";
+          push(ir_list, ir_store);
+        }
+      }
+      continue;
+    }
+
+    // 식별자 (변수): LOAD 생성
+    let is_letter = (token >= "a" and token <= "z") or (token >= "A" and token <= "Z");
+    if is_letter {
+      let ir_load = "{\"op\":\"LOAD\",\"arg\":\"";
+      ir_load = ir_load + token;
+      ir_load = ir_load + "\"}";
+      push(ir_list, ir_load);
+      pos += 1;
+      continue;
+    }
+
+    // 그 외: 스킵
+    pos += 1;
+  }
+
+  // ── IR 배열 → JSON 문자열 ──────────────
+
+  let result = "[";
+  let i = 0;
+  while i < length(ir_list) {
+    if i > 0 {
+      result = result + ",";
+    }
+    result = result + charAt(ir_list, i);
+    i += 1;
+  }
+  result = result + "]";
+
+  return result;
+}

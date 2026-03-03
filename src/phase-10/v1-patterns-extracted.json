@@ -1,0 +1,8437 @@
+[
+  {
+    "id": "v1-datetime-now",
+    "name": "now",
+    "aliases": [
+      "now",
+      "datetime_now"
+    ],
+    "category": "collections",
+    "description": "Function now from datetime",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "DateTime",
+    "examples": [
+      {
+        "input": "Call now",
+        "output": "DateTime",
+        "description": "Basic usage of now"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "now(): DateTime"
+    }
+  },
+  {
+    "id": "v1-datetime-fromTimestamp",
+    "name": "fromTimestamp",
+    "aliases": [
+      "fromTimestamp",
+      "datetime_fromTimestamp"
+    ],
+    "category": "collections",
+    "description": "Function fromTimestamp from datetime",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "DateTime",
+    "examples": [
+      {
+        "input": "Call fromTimestamp",
+        "output": "DateTime",
+        "description": "Basic usage of fromTimestamp"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "fromTimestamp(timestamp: number): DateTime"
+    }
+  },
+  {
+    "id": "v1-datetime-parse",
+    "name": "parse",
+    "aliases": [
+      "parse",
+      "datetime_parse"
+    ],
+    "category": "collections",
+    "description": "Function parse from datetime",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "DateTime",
+    "examples": [
+      {
+        "input": "Call parse",
+        "output": "DateTime",
+        "description": "Basic usage of parse"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "parse(dateStr: string): DateTime"
+    }
+  },
+  {
+    "id": "v1-datetime-format",
+    "name": "format",
+    "aliases": [
+      "format",
+      "datetime_format"
+    ],
+    "category": "collections",
+    "description": "Function format from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime, string = 'YYYY-MM-DD HH",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call format",
+        "output": "string",
+        "description": "Basic usage of format"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "format(dt: DateTime, format: string = 'YYYY-MM-DD HH:mm:ss'): string"
+    }
+  },
+  {
+    "id": "v1-datetime-toISOString",
+    "name": "toISOString",
+    "aliases": [
+      "toISOString",
+      "datetime_toISOString"
+    ],
+    "category": "collections",
+    "description": "Function toISOString from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call toISOString",
+        "output": "string",
+        "description": "Basic usage of toISOString"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toISOString(dt: DateTime): string"
+    }
+  },
+  {
+    "id": "v1-datetime-addHours",
+    "name": "addHours",
+    "aliases": [
+      "addHours",
+      "datetime_addHours"
+    ],
+    "category": "collections",
+    "description": "Function addHours from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime, number",
+    "outputType": "DateTime",
+    "examples": [
+      {
+        "input": "Call addHours",
+        "output": "DateTime",
+        "description": "Basic usage of addHours"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "addHours(dt: DateTime, hours: number): DateTime"
+    }
+  },
+  {
+    "id": "v1-datetime-addDays",
+    "name": "addDays",
+    "aliases": [
+      "addDays",
+      "datetime_addDays"
+    ],
+    "category": "collections",
+    "description": "Function addDays from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime, number",
+    "outputType": "DateTime",
+    "examples": [
+      {
+        "input": "Call addDays",
+        "output": "DateTime",
+        "description": "Basic usage of addDays"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "addDays(dt: DateTime, days: number): DateTime"
+    }
+  },
+  {
+    "id": "v1-datetime-addMonths",
+    "name": "addMonths",
+    "aliases": [
+      "addMonths",
+      "datetime_addMonths"
+    ],
+    "category": "collections",
+    "description": "Function addMonths from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime, number",
+    "outputType": "DateTime",
+    "examples": [
+      {
+        "input": "Call addMonths",
+        "output": "DateTime",
+        "description": "Basic usage of addMonths"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "addMonths(dt: DateTime, months: number): DateTime"
+    }
+  },
+  {
+    "id": "v1-datetime-addYears",
+    "name": "addYears",
+    "aliases": [
+      "addYears",
+      "datetime_addYears"
+    ],
+    "category": "collections",
+    "description": "Function addYears from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime, number",
+    "outputType": "DateTime",
+    "examples": [
+      {
+        "input": "Call addYears",
+        "output": "DateTime",
+        "description": "Basic usage of addYears"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "addYears(dt: DateTime, years: number): DateTime"
+    }
+  },
+  {
+    "id": "v1-datetime-diff",
+    "name": "diff",
+    "aliases": [
+      "diff",
+      "datetime_diff"
+    ],
+    "category": "collections",
+    "description": "Function diff from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime, DateTime",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call diff",
+        "output": "number",
+        "description": "Basic usage of diff"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "diff(dt1: DateTime, dt2: DateTime): number"
+    }
+  },
+  {
+    "id": "v1-datetime-diffDays",
+    "name": "diffDays",
+    "aliases": [
+      "diffDays",
+      "datetime_diffDays"
+    ],
+    "category": "collections",
+    "description": "Function diffDays from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime, DateTime",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call diffDays",
+        "output": "number",
+        "description": "Basic usage of diffDays"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "diffDays(dt1: DateTime, dt2: DateTime): number"
+    }
+  },
+  {
+    "id": "v1-datetime-diffHours",
+    "name": "diffHours",
+    "aliases": [
+      "diffHours",
+      "datetime_diffHours"
+    ],
+    "category": "collections",
+    "description": "Function diffHours from datetime",
+    "confidence": 0.9,
+    "inputTypes": "DateTime, DateTime",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call diffHours",
+        "output": "number",
+        "description": "Basic usage of diffHours"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "diffHours(dt1: DateTime, dt2: DateTime): number"
+    }
+  },
+  {
+    "id": "v1-datetime-isLeapYear",
+    "name": "isLeapYear",
+    "aliases": [
+      "isLeapYear",
+      "datetime_isLeapYear"
+    ],
+    "category": "collections",
+    "description": "Function isLeapYear from datetime",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isLeapYear",
+        "output": "boolean",
+        "description": "Basic usage of isLeapYear"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isLeapYear(year: number): boolean"
+    }
+  },
+  {
+    "id": "v1-datetime-daysInMonth",
+    "name": "daysInMonth",
+    "aliases": [
+      "daysInMonth",
+      "datetime_daysInMonth"
+    ],
+    "category": "collections",
+    "description": "Function daysInMonth from datetime",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call daysInMonth",
+        "output": "number",
+        "description": "Basic usage of daysInMonth"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "daysInMonth(year: number, month: number): number"
+    }
+  },
+  {
+    "id": "v1-datetime-getWeekdayName",
+    "name": "getWeekdayName",
+    "aliases": [
+      "getWeekdayName",
+      "datetime_getWeekdayName"
+    ],
+    "category": "collections",
+    "description": "Function getWeekdayName from datetime",
+    "confidence": 0.9,
+    "inputTypes": "number, string = 'en'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call getWeekdayName",
+        "output": "string",
+        "description": "Basic usage of getWeekdayName"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "getWeekdayName(dayOfWeek: number, lang: string = 'en'): string"
+    }
+  },
+  {
+    "id": "v1-datetime-getMonthName",
+    "name": "getMonthName",
+    "aliases": [
+      "getMonthName",
+      "datetime_getMonthName"
+    ],
+    "category": "collections",
+    "description": "Function getMonthName from datetime",
+    "confidence": 0.9,
+    "inputTypes": "number, string = 'en'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call getMonthName",
+        "output": "string",
+        "description": "Basic usage of getMonthName"
+      }
+    ],
+    "tags": [
+      "collections",
+      "datetime",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "datetime",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "getMonthName(month: number, lang: string = 'en'): string"
+    }
+  },
+  {
+    "id": "v1-regexp-match",
+    "name": "match",
+    "aliases": [
+      "match",
+      "regexp_match"
+    ],
+    "category": "collections",
+    "description": "Function match from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string",
+    "outputType": "MatchResult",
+    "examples": [
+      {
+        "input": "Call match",
+        "output": "MatchResult",
+        "description": "Basic usage of match"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "match(text: string, pattern: string | RegExp, flags?: string): MatchResult"
+    }
+  },
+  {
+    "id": "v1-regexp-fullMatch",
+    "name": "fullMatch",
+    "aliases": [
+      "fullMatch",
+      "regexp_fullMatch"
+    ],
+    "category": "collections",
+    "description": "Function fullMatch from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call fullMatch",
+        "output": "boolean",
+        "description": "Basic usage of fullMatch"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "fullMatch(text: string, pattern: string | RegExp, flags?: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-contains",
+    "name": "contains",
+    "aliases": [
+      "contains",
+      "regexp_contains"
+    ],
+    "category": "collections",
+    "description": "Function contains from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call contains",
+        "output": "boolean",
+        "description": "Basic usage of contains"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "contains(text: string, pattern: string | RegExp, flags?: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-findAll",
+    "name": "findAll",
+    "aliases": [
+      "findAll",
+      "regexp_findAll"
+    ],
+    "category": "collections",
+    "description": "Function findAll from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string",
+    "outputType": "GlobalMatchResult",
+    "examples": [
+      {
+        "input": "Call findAll",
+        "output": "GlobalMatchResult",
+        "description": "Basic usage of findAll"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "findAll(text: string, pattern: string | RegExp, flags?: string): GlobalMatchResult"
+    }
+  },
+  {
+    "id": "v1-regexp-replace",
+    "name": "replace",
+    "aliases": [
+      "replace",
+      "regexp_replace"
+    ],
+    "category": "collections",
+    "description": "Function replace from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string | ((match, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call replace",
+        "output": "string",
+        "description": "Basic usage of replace"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 4,
+      "signature": "replace(text: string, pattern: string | RegExp, replacement: string | ((match: string) => string), flags?: string): string"
+    }
+  },
+  {
+    "id": "v1-regexp-replaceAll",
+    "name": "replaceAll",
+    "aliases": [
+      "replaceAll",
+      "regexp_replaceAll"
+    ],
+    "category": "collections",
+    "description": "Function replaceAll from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string | ((match, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call replaceAll",
+        "output": "string",
+        "description": "Basic usage of replaceAll"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 4,
+      "signature": "replaceAll(text: string, pattern: string | RegExp, replacement: string | ((match: string) => string), flags?: string): string"
+    }
+  },
+  {
+    "id": "v1-regexp-test",
+    "name": "test",
+    "aliases": [
+      "test",
+      "regexp_test"
+    ],
+    "category": "collections",
+    "description": "Function test from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call test",
+        "output": "boolean",
+        "description": "Basic usage of test"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "test(text: string, pattern: string | RegExp, flags?: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-isEmail",
+    "name": "isEmail",
+    "aliases": [
+      "isEmail",
+      "regexp_isEmail"
+    ],
+    "category": "collections",
+    "description": "Function isEmail from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isEmail",
+        "output": "boolean",
+        "description": "Basic usage of isEmail"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isEmail(text: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-isUrl",
+    "name": "isUrl",
+    "aliases": [
+      "isUrl",
+      "regexp_isUrl"
+    ],
+    "category": "collections",
+    "description": "Function isUrl from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isUrl",
+        "output": "boolean",
+        "description": "Basic usage of isUrl"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isUrl(text: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-isNumeric",
+    "name": "isNumeric",
+    "aliases": [
+      "isNumeric",
+      "regexp_isNumeric"
+    ],
+    "category": "collections",
+    "description": "Function isNumeric from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isNumeric",
+        "output": "boolean",
+        "description": "Basic usage of isNumeric"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isNumeric(text: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-isInteger",
+    "name": "isInteger",
+    "aliases": [
+      "isInteger",
+      "regexp_isInteger"
+    ],
+    "category": "collections",
+    "description": "Function isInteger from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isInteger",
+        "output": "boolean",
+        "description": "Basic usage of isInteger"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isInteger(text: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-isAlpha",
+    "name": "isAlpha",
+    "aliases": [
+      "isAlpha",
+      "regexp_isAlpha"
+    ],
+    "category": "collections",
+    "description": "Function isAlpha from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isAlpha",
+        "output": "boolean",
+        "description": "Basic usage of isAlpha"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isAlpha(text: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-isAlphanumeric",
+    "name": "isAlphanumeric",
+    "aliases": [
+      "isAlphanumeric",
+      "regexp_isAlphanumeric"
+    ],
+    "category": "collections",
+    "description": "Function isAlphanumeric from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isAlphanumeric",
+        "output": "boolean",
+        "description": "Basic usage of isAlphanumeric"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isAlphanumeric(text: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-isKorean",
+    "name": "isKorean",
+    "aliases": [
+      "isKorean",
+      "regexp_isKorean"
+    ],
+    "category": "collections",
+    "description": "Function isKorean from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isKorean",
+        "output": "boolean",
+        "description": "Basic usage of isKorean"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isKorean(text: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-isWhitespace",
+    "name": "isWhitespace",
+    "aliases": [
+      "isWhitespace",
+      "regexp_isWhitespace"
+    ],
+    "category": "collections",
+    "description": "Function isWhitespace from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isWhitespace",
+        "output": "boolean",
+        "description": "Basic usage of isWhitespace"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isWhitespace(text: string): boolean"
+    }
+  },
+  {
+    "id": "v1-regexp-escape",
+    "name": "escape",
+    "aliases": [
+      "escape",
+      "regexp_escape"
+    ],
+    "category": "collections",
+    "description": "Function escape from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call escape",
+        "output": "string",
+        "description": "Basic usage of escape"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "escape(pattern: string): string"
+    }
+  },
+  {
+    "id": "v1-regexp-namedCapture",
+    "name": "namedCapture",
+    "aliases": [
+      "namedCapture",
+      "regexp_namedCapture"
+    ],
+    "category": "collections",
+    "description": "Function namedCapture from regexp",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string",
+    "outputType": "Record<string, string>",
+    "examples": [
+      {
+        "input": "Call namedCapture",
+        "output": "Record<string, string>",
+        "description": "Basic usage of namedCapture"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 4,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "namedCapture(text: string, pattern: string | RegExp, flags?: string): Record<string, string>"
+    }
+  },
+  {
+    "id": "v1-regexp-clearCache",
+    "name": "clearCache",
+    "aliases": [
+      "clearCache",
+      "regexp_clearCache"
+    ],
+    "category": "collections",
+    "description": "Function clearCache from regexp",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call clearCache",
+        "output": "void",
+        "description": "Basic usage of clearCache"
+      }
+    ],
+    "tags": [
+      "collections",
+      "regexp",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "regexp",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "clearCache(): void"
+    }
+  },
+  {
+    "id": "v1-string-toLowerCase",
+    "name": "toLowerCase",
+    "aliases": [
+      "toLowerCase",
+      "string_toLowerCase"
+    ],
+    "category": "collections",
+    "description": "Function toLowerCase from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call toLowerCase",
+        "output": "string",
+        "description": "Basic usage of toLowerCase"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toLowerCase(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-toUpperCase",
+    "name": "toUpperCase",
+    "aliases": [
+      "toUpperCase",
+      "string_toUpperCase"
+    ],
+    "category": "collections",
+    "description": "Function toUpperCase from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call toUpperCase",
+        "output": "string",
+        "description": "Basic usage of toUpperCase"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toUpperCase(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-toCamelCase",
+    "name": "toCamelCase",
+    "aliases": [
+      "toCamelCase",
+      "string_toCamelCase"
+    ],
+    "category": "collections",
+    "description": "Function toCamelCase from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call toCamelCase",
+        "output": "string",
+        "description": "Basic usage of toCamelCase"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toCamelCase(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-toSnakeCase",
+    "name": "toSnakeCase",
+    "aliases": [
+      "toSnakeCase",
+      "string_toSnakeCase"
+    ],
+    "category": "collections",
+    "description": "Function toSnakeCase from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call toSnakeCase",
+        "output": "string",
+        "description": "Basic usage of toSnakeCase"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toSnakeCase(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-toKebabCase",
+    "name": "toKebabCase",
+    "aliases": [
+      "toKebabCase",
+      "string_toKebabCase"
+    ],
+    "category": "collections",
+    "description": "Function toKebabCase from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call toKebabCase",
+        "output": "string",
+        "description": "Basic usage of toKebabCase"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toKebabCase(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-toPascalCase",
+    "name": "toPascalCase",
+    "aliases": [
+      "toPascalCase",
+      "string_toPascalCase"
+    ],
+    "category": "collections",
+    "description": "Function toPascalCase from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call toPascalCase",
+        "output": "string",
+        "description": "Basic usage of toPascalCase"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toPascalCase(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-trim",
+    "name": "trim",
+    "aliases": [
+      "trim",
+      "string_trim"
+    ],
+    "category": "collections",
+    "description": "Function trim from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call trim",
+        "output": "string",
+        "description": "Basic usage of trim"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "trim(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-trimStart",
+    "name": "trimStart",
+    "aliases": [
+      "trimStart",
+      "string_trimStart"
+    ],
+    "category": "collections",
+    "description": "Function trimStart from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call trimStart",
+        "output": "string",
+        "description": "Basic usage of trimStart"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "trimStart(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-trimEnd",
+    "name": "trimEnd",
+    "aliases": [
+      "trimEnd",
+      "string_trimEnd"
+    ],
+    "category": "collections",
+    "description": "Function trimEnd from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call trimEnd",
+        "output": "string",
+        "description": "Basic usage of trimEnd"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "trimEnd(str: string): string"
+    }
+  },
+  {
+    "id": "v1-string-join",
+    "name": "join",
+    "aliases": [
+      "join",
+      "string_join"
+    ],
+    "category": "collections",
+    "description": "Function join from string",
+    "confidence": 0.9,
+    "inputTypes": "string[], string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call join",
+        "output": "string",
+        "description": "Basic usage of join"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "join(parts: string[], separator: string): string"
+    }
+  },
+  {
+    "id": "v1-string-substring",
+    "name": "substring",
+    "aliases": [
+      "substring",
+      "string_substring"
+    ],
+    "category": "collections",
+    "description": "Function substring from string",
+    "confidence": 0.9,
+    "inputTypes": "string, number, number",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call substring",
+        "output": "string",
+        "description": "Basic usage of substring"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "substring(str: string, start: number, end?: number): string"
+    }
+  },
+  {
+    "id": "v1-string-slice",
+    "name": "slice",
+    "aliases": [
+      "slice",
+      "string_slice"
+    ],
+    "category": "collections",
+    "description": "Function slice from string",
+    "confidence": 0.9,
+    "inputTypes": "string, number, number",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call slice",
+        "output": "string",
+        "description": "Basic usage of slice"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "slice(str: string, start: number, end?: number): string"
+    }
+  },
+  {
+    "id": "v1-string-replace",
+    "name": "replace",
+    "aliases": [
+      "replace",
+      "string_replace"
+    ],
+    "category": "collections",
+    "description": "Function replace from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call replace",
+        "output": "string",
+        "description": "Basic usage of replace"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "replace(str: string, search: string | RegExp, replace: string): string"
+    }
+  },
+  {
+    "id": "v1-string-replaceAll",
+    "name": "replaceAll",
+    "aliases": [
+      "replaceAll",
+      "string_replaceAll"
+    ],
+    "category": "collections",
+    "description": "Function replaceAll from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string | RegExp, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call replaceAll",
+        "output": "string",
+        "description": "Basic usage of replaceAll"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "replaceAll(str: string, search: string | RegExp, replace: string): string"
+    }
+  },
+  {
+    "id": "v1-string-includes",
+    "name": "includes",
+    "aliases": [
+      "includes",
+      "string_includes"
+    ],
+    "category": "collections",
+    "description": "Function includes from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call includes",
+        "output": "boolean",
+        "description": "Basic usage of includes"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "includes(str: string, search: string): boolean"
+    }
+  },
+  {
+    "id": "v1-string-indexOf",
+    "name": "indexOf",
+    "aliases": [
+      "indexOf",
+      "string_indexOf"
+    ],
+    "category": "collections",
+    "description": "Function indexOf from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call indexOf",
+        "output": "number",
+        "description": "Basic usage of indexOf"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "indexOf(str: string, search: string): number"
+    }
+  },
+  {
+    "id": "v1-string-lastIndexOf",
+    "name": "lastIndexOf",
+    "aliases": [
+      "lastIndexOf",
+      "string_lastIndexOf"
+    ],
+    "category": "collections",
+    "description": "Function lastIndexOf from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call lastIndexOf",
+        "output": "number",
+        "description": "Basic usage of lastIndexOf"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "lastIndexOf(str: string, search: string): number"
+    }
+  },
+  {
+    "id": "v1-string-startsWith",
+    "name": "startsWith",
+    "aliases": [
+      "startsWith",
+      "string_startsWith"
+    ],
+    "category": "collections",
+    "description": "Function startsWith from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call startsWith",
+        "output": "boolean",
+        "description": "Basic usage of startsWith"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "startsWith(str: string, prefix: string): boolean"
+    }
+  },
+  {
+    "id": "v1-string-endsWith",
+    "name": "endsWith",
+    "aliases": [
+      "endsWith",
+      "string_endsWith"
+    ],
+    "category": "collections",
+    "description": "Function endsWith from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call endsWith",
+        "output": "boolean",
+        "description": "Basic usage of endsWith"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "endsWith(str: string, suffix: string): boolean"
+    }
+  },
+  {
+    "id": "v1-string-len",
+    "name": "len",
+    "aliases": [
+      "len",
+      "string_len"
+    ],
+    "category": "collections",
+    "description": "Function len from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call len",
+        "output": "number",
+        "description": "Basic usage of len"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "len(str: string): number"
+    }
+  },
+  {
+    "id": "v1-string-repeat",
+    "name": "repeat",
+    "aliases": [
+      "repeat",
+      "string_repeat"
+    ],
+    "category": "collections",
+    "description": "Function repeat from string",
+    "confidence": 0.9,
+    "inputTypes": "string, number",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call repeat",
+        "output": "string",
+        "description": "Basic usage of repeat"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "repeat(str: string, count: number): string"
+    }
+  },
+  {
+    "id": "v1-string-padStart",
+    "name": "padStart",
+    "aliases": [
+      "padStart",
+      "string_padStart"
+    ],
+    "category": "collections",
+    "description": "Function padStart from string",
+    "confidence": 0.9,
+    "inputTypes": "string, number, string = ' '",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call padStart",
+        "output": "string",
+        "description": "Basic usage of padStart"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "padStart(str: string, length: number, fill: string = ' '): string"
+    }
+  },
+  {
+    "id": "v1-string-padEnd",
+    "name": "padEnd",
+    "aliases": [
+      "padEnd",
+      "string_padEnd"
+    ],
+    "category": "collections",
+    "description": "Function padEnd from string",
+    "confidence": 0.9,
+    "inputTypes": "string, number, string = ' '",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call padEnd",
+        "output": "string",
+        "description": "Basic usage of padEnd"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "padEnd(str: string, length: number, fill: string = ' '): string"
+    }
+  },
+  {
+    "id": "v1-string-removePrefix",
+    "name": "removePrefix",
+    "aliases": [
+      "removePrefix",
+      "string_removePrefix"
+    ],
+    "category": "collections",
+    "description": "Function removePrefix from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call removePrefix",
+        "output": "string",
+        "description": "Basic usage of removePrefix"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "removePrefix(str: string, prefix: string): string"
+    }
+  },
+  {
+    "id": "v1-string-removeSuffix",
+    "name": "removeSuffix",
+    "aliases": [
+      "removeSuffix",
+      "string_removeSuffix"
+    ],
+    "category": "collections",
+    "description": "Function removeSuffix from string",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call removeSuffix",
+        "output": "string",
+        "description": "Basic usage of removeSuffix"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "removeSuffix(str: string, suffix: string): string"
+    }
+  },
+  {
+    "id": "v1-string-reverse",
+    "name": "reverse",
+    "aliases": [
+      "reverse",
+      "string_reverse"
+    ],
+    "category": "collections",
+    "description": "Function reverse from string",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call reverse",
+        "output": "string",
+        "description": "Basic usage of reverse"
+      }
+    ],
+    "tags": [
+      "collections",
+      "string",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "string",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "reverse(str: string): string"
+    }
+  },
+  {
+    "id": "v1-env-load",
+    "name": "load",
+    "aliases": [
+      "load",
+      "env_load"
+    ],
+    "category": "core",
+    "description": "Function load from env",
+    "confidence": 0.92,
+    "inputTypes": "string = '.env'",
+    "outputType": "Record<string, string>",
+    "examples": [
+      {
+        "input": "Call load",
+        "output": "Record<string, string>",
+        "description": "Basic usage of load"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "load(filePath: string = '.env'): Record<string, string>"
+    }
+  },
+  {
+    "id": "v1-env-getRequired",
+    "name": "getRequired",
+    "aliases": [
+      "getRequired",
+      "env_getRequired"
+    ],
+    "category": "core",
+    "description": "Function getRequired from env",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call getRequired",
+        "output": "string",
+        "description": "Basic usage of getRequired"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "getRequired(key: string): string"
+    }
+  },
+  {
+    "id": "v1-env-set",
+    "name": "set",
+    "aliases": [
+      "set",
+      "env_set"
+    ],
+    "category": "core",
+    "description": "Function set from env",
+    "confidence": 0.92,
+    "inputTypes": "string, string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call set",
+        "output": "void",
+        "description": "Basic usage of set"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "set(key: string, value: string): void"
+    }
+  },
+  {
+    "id": "v1-env-unset",
+    "name": "unset",
+    "aliases": [
+      "unset",
+      "env_unset"
+    ],
+    "category": "core",
+    "description": "Function unset from env",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call unset",
+        "output": "void",
+        "description": "Basic usage of unset"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "unset(key: string): void"
+    }
+  },
+  {
+    "id": "v1-env-has",
+    "name": "has",
+    "aliases": [
+      "has",
+      "env_has"
+    ],
+    "category": "core",
+    "description": "Function has from env",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call has",
+        "output": "boolean",
+        "description": "Basic usage of has"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "has(key: string): boolean"
+    }
+  },
+  {
+    "id": "v1-env-all",
+    "name": "all",
+    "aliases": [
+      "all",
+      "env_all"
+    ],
+    "category": "core",
+    "description": "Function all from env",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "Record<string, string>",
+    "examples": [
+      {
+        "input": "Call all",
+        "output": "Record<string, string>",
+        "description": "Basic usage of all"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "all(): Record<string, string>"
+    }
+  },
+  {
+    "id": "v1-env-save",
+    "name": "save",
+    "aliases": [
+      "save",
+      "env_save"
+    ],
+    "category": "core",
+    "description": "Function save from env",
+    "confidence": 0.92,
+    "inputTypes": "string, Record<string, any",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call save",
+        "output": "void",
+        "description": "Basic usage of save"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "save(filePath: string, env: Record<string, string>): void"
+    }
+  },
+  {
+    "id": "v1-env-initSecrets",
+    "name": "initSecrets",
+    "aliases": [
+      "initSecrets",
+      "env_initSecrets"
+    ],
+    "category": "core",
+    "description": "Function initSecrets from env",
+    "confidence": 0.92,
+    "inputTypes": "SecretManager | Record<string, any",
+    "outputType": "SecretManager",
+    "examples": [
+      {
+        "input": "Call initSecrets",
+        "output": "SecretManager",
+        "description": "Basic usage of initSecrets"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "initSecrets(manager: SecretManager | Record<string, any>): SecretManager"
+    }
+  },
+  {
+    "id": "v1-env-getSecretRequired",
+    "name": "getSecretRequired",
+    "aliases": [
+      "getSecretRequired",
+      "env_getSecretRequired"
+    ],
+    "category": "core",
+    "description": "Function getSecretRequired from env",
+    "confidence": 0.92,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call getSecretRequired",
+        "output": "string",
+        "description": "Basic usage of getSecretRequired"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "getSecretRequired(key: string, requester?: string): string"
+    }
+  },
+  {
+    "id": "v1-env-setSecret",
+    "name": "setSecret",
+    "aliases": [
+      "setSecret",
+      "env_setSecret"
+    ],
+    "category": "core",
+    "description": "Function setSecret from env",
+    "confidence": 0.92,
+    "inputTypes": "string, string, Record<string, any",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call setSecret",
+        "output": "void",
+        "description": "Basic usage of setSecret"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 4,
+      "signature": "setSecret(key: string, value: string, options?: Record<string, any>): void"
+    }
+  },
+  {
+    "id": "v1-env-deleteSecret",
+    "name": "deleteSecret",
+    "aliases": [
+      "deleteSecret",
+      "env_deleteSecret"
+    ],
+    "category": "core",
+    "description": "Function deleteSecret from env",
+    "confidence": 0.92,
+    "inputTypes": "string, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call deleteSecret",
+        "output": "boolean",
+        "description": "Basic usage of deleteSecret"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "deleteSecret(key: string, requester?: string): boolean"
+    }
+  },
+  {
+    "id": "v1-env-hasSecret",
+    "name": "hasSecret",
+    "aliases": [
+      "hasSecret",
+      "env_hasSecret"
+    ],
+    "category": "core",
+    "description": "Function hasSecret from env",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call hasSecret",
+        "output": "boolean",
+        "description": "Basic usage of hasSecret"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "hasSecret(key: string): boolean"
+    }
+  },
+  {
+    "id": "v1-env-loadSecretsFromEnv",
+    "name": "loadSecretsFromEnv",
+    "aliases": [
+      "loadSecretsFromEnv",
+      "env_loadSecretsFromEnv"
+    ],
+    "category": "core",
+    "description": "Function loadSecretsFromEnv from env",
+    "confidence": 0.92,
+    "inputTypes": "RegExp",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call loadSecretsFromEnv",
+        "output": "number",
+        "description": "Basic usage of loadSecretsFromEnv"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "loadSecretsFromEnv(pattern?: RegExp): number"
+    }
+  },
+  {
+    "id": "v1-env-flushSecrets",
+    "name": "flushSecrets",
+    "aliases": [
+      "flushSecrets",
+      "env_flushSecrets"
+    ],
+    "category": "core",
+    "description": "Function flushSecrets from env",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call flushSecrets",
+        "output": "void",
+        "description": "Basic usage of flushSecrets"
+      }
+    ],
+    "tags": [
+      "core",
+      "env",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "env",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "flushSecrets(): void"
+    }
+  },
+  {
+    "id": "v1-fs-readFile",
+    "name": "readFile",
+    "aliases": [
+      "readFile",
+      "fs_readFile"
+    ],
+    "category": "core",
+    "description": "Function readFile from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, BufferEncoding = 'utf-8'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call readFile",
+        "output": "string",
+        "description": "Basic usage of readFile"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "readFile(filePath: string, encoding: BufferEncoding = 'utf-8'): string"
+    }
+  },
+  {
+    "id": "v1-fs-readFileAsync",
+    "name": "readFileAsync",
+    "aliases": [
+      "readFileAsync",
+      "fs_readFileAsync"
+    ],
+    "category": "core",
+    "description": "Function readFileAsync from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, BufferEncoding = 'utf-8'",
+    "outputType": "Promise<string>",
+    "examples": [
+      {
+        "input": "Call readFileAsync",
+        "output": "Promise<string>",
+        "description": "Basic usage of readFileAsync"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "async"
+    ],
+    "complexity": 4,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": true,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "readFileAsync(filePath: string, encoding: BufferEncoding = 'utf-8'): Promise<string>"
+    }
+  },
+  {
+    "id": "v1-fs-writeFile",
+    "name": "writeFile",
+    "aliases": [
+      "writeFile",
+      "fs_writeFile"
+    ],
+    "category": "core",
+    "description": "Function writeFile from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, string, BufferEncoding = 'utf-8'",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call writeFile",
+        "output": "void",
+        "description": "Basic usage of writeFile"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "writeFile(filePath: string, content: string, encoding: BufferEncoding = 'utf-8'): void"
+    }
+  },
+  {
+    "id": "v1-fs-writeFileAsync",
+    "name": "writeFileAsync",
+    "aliases": [
+      "writeFileAsync",
+      "fs_writeFileAsync"
+    ],
+    "category": "core",
+    "description": "Function writeFileAsync from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, string, BufferEncoding = 'utf-8'",
+    "outputType": "Promise<void>",
+    "examples": [
+      {
+        "input": "Call writeFileAsync",
+        "output": "Promise<void>",
+        "description": "Basic usage of writeFileAsync"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "async"
+    ],
+    "complexity": 5,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": true,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "writeFileAsync(filePath: string, content: string, encoding: BufferEncoding = 'utf-8'): Promise<void>"
+    }
+  },
+  {
+    "id": "v1-fs-appendFile",
+    "name": "appendFile",
+    "aliases": [
+      "appendFile",
+      "fs_appendFile"
+    ],
+    "category": "core",
+    "description": "Function appendFile from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, string, BufferEncoding = 'utf-8'",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call appendFile",
+        "output": "void",
+        "description": "Basic usage of appendFile"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "appendFile(filePath: string, content: string, encoding: BufferEncoding = 'utf-8'): void"
+    }
+  },
+  {
+    "id": "v1-fs-exists",
+    "name": "exists",
+    "aliases": [
+      "exists",
+      "fs_exists"
+    ],
+    "category": "core",
+    "description": "Function exists from fs",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call exists",
+        "output": "boolean",
+        "description": "Basic usage of exists"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "exists(filePath: string): boolean"
+    }
+  },
+  {
+    "id": "v1-fs-remove",
+    "name": "remove",
+    "aliases": [
+      "remove",
+      "fs_remove"
+    ],
+    "category": "core",
+    "description": "Function remove from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, boolean = false",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call remove",
+        "output": "void",
+        "description": "Basic usage of remove"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "remove(filePath: string, recursive: boolean = false): void"
+    }
+  },
+  {
+    "id": "v1-fs-mkdir",
+    "name": "mkdir",
+    "aliases": [
+      "mkdir",
+      "fs_mkdir"
+    ],
+    "category": "core",
+    "description": "Function mkdir from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, boolean = true",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call mkdir",
+        "output": "void",
+        "description": "Basic usage of mkdir"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "mkdir(dirPath: string, recursive: boolean = true): void"
+    }
+  },
+  {
+    "id": "v1-fs-stat",
+    "name": "stat",
+    "aliases": [
+      "stat",
+      "fs_stat"
+    ],
+    "category": "core",
+    "description": "Function stat from fs",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "FileStats",
+    "examples": [
+      {
+        "input": "Call stat",
+        "output": "FileStats",
+        "description": "Basic usage of stat"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "stat(filePath: string): FileStats"
+    }
+  },
+  {
+    "id": "v1-fs-copy",
+    "name": "copy",
+    "aliases": [
+      "copy",
+      "fs_copy"
+    ],
+    "category": "core",
+    "description": "Function copy from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call copy",
+        "output": "void",
+        "description": "Basic usage of copy"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "copy(src: string, dest: string): void"
+    }
+  },
+  {
+    "id": "v1-fs-rename",
+    "name": "rename",
+    "aliases": [
+      "rename",
+      "fs_rename"
+    ],
+    "category": "core",
+    "description": "Function rename from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call rename",
+        "output": "void",
+        "description": "Basic usage of rename"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "rename(oldPath: string, newPath: string): void"
+    }
+  },
+  {
+    "id": "v1-fs-watch",
+    "name": "watch",
+    "aliases": [
+      "watch",
+      "fs_watch"
+    ],
+    "category": "core",
+    "description": "Function watch from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, (event, string) => void",
+    "outputType": "FileWatcher",
+    "examples": [
+      {
+        "input": "Call watch",
+        "output": "FileWatcher",
+        "description": "Basic usage of watch"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "watch(filePath: string, callback: (event: 'change' | 'rename', filename: string) => void): FileWatcher"
+    }
+  },
+  {
+    "id": "v1-fs-size",
+    "name": "size",
+    "aliases": [
+      "size",
+      "fs_size"
+    ],
+    "category": "core",
+    "description": "Function size from fs",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call size",
+        "output": "number",
+        "description": "Basic usage of size"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "size(filePath: string): number"
+    }
+  },
+  {
+    "id": "v1-fs-chmod",
+    "name": "chmod",
+    "aliases": [
+      "chmod",
+      "fs_chmod"
+    ],
+    "category": "core",
+    "description": "Function chmod from fs",
+    "confidence": 0.9,
+    "inputTypes": "string, number",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call chmod",
+        "output": "void",
+        "description": "Basic usage of chmod"
+      }
+    ],
+    "tags": [
+      "core",
+      "fs",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "fs",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "chmod(filePath: string, mode: number): void"
+    }
+  },
+  {
+    "id": "v1-io-println",
+    "name": "println",
+    "aliases": [
+      "println",
+      "io_println"
+    ],
+    "category": "core",
+    "description": "Function println from io",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call println",
+        "output": "void",
+        "description": "Basic usage of println"
+      }
+    ],
+    "tags": [
+      "core",
+      "io",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "io",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "println(msg: string): void"
+    }
+  },
+  {
+    "id": "v1-io-print",
+    "name": "print",
+    "aliases": [
+      "print",
+      "io_print"
+    ],
+    "category": "core",
+    "description": "Function print from io",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call print",
+        "output": "void",
+        "description": "Basic usage of print"
+      }
+    ],
+    "tags": [
+      "core",
+      "io",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "io",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "print(msg: string): void"
+    }
+  },
+  {
+    "id": "v1-io-eprintln",
+    "name": "eprintln",
+    "aliases": [
+      "eprintln",
+      "io_eprintln"
+    ],
+    "category": "core",
+    "description": "Function eprintln from io",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call eprintln",
+        "output": "void",
+        "description": "Basic usage of eprintln"
+      }
+    ],
+    "tags": [
+      "core",
+      "io",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "io",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "eprintln(msg: string): void"
+    }
+  },
+  {
+    "id": "v1-io-eprint",
+    "name": "eprint",
+    "aliases": [
+      "eprint",
+      "io_eprint"
+    ],
+    "category": "core",
+    "description": "Function eprint from io",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call eprint",
+        "output": "void",
+        "description": "Basic usage of eprint"
+      }
+    ],
+    "tags": [
+      "core",
+      "io",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "io",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "eprint(msg: string): void"
+    }
+  },
+  {
+    "id": "v1-io-readLine",
+    "name": "readLine",
+    "aliases": [
+      "readLine",
+      "io_readLine"
+    ],
+    "category": "core",
+    "description": "Function readLine from io",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call readLine",
+        "output": "string",
+        "description": "Basic usage of readLine"
+      }
+    ],
+    "tags": [
+      "core",
+      "io",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "io",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "readLine(prompt?: string): string"
+    }
+  },
+  {
+    "id": "v1-io-write",
+    "name": "write",
+    "aliases": [
+      "write",
+      "io_write"
+    ],
+    "category": "core",
+    "description": "Function write from io",
+    "confidence": 0.9,
+    "inputTypes": "'stdout' | 'stderr', string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call write",
+        "output": "void",
+        "description": "Basic usage of write"
+      }
+    ],
+    "tags": [
+      "core",
+      "io",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "io",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "write(stream: 'stdout' | 'stderr', msg: string): void"
+    }
+  },
+  {
+    "id": "v1-io-printf",
+    "name": "printf",
+    "aliases": [
+      "printf",
+      "io_printf"
+    ],
+    "category": "core",
+    "description": "Function printf from io",
+    "confidence": 0.9,
+    "inputTypes": "string, any[]",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call printf",
+        "output": "void",
+        "description": "Basic usage of printf"
+      }
+    ],
+    "tags": [
+      "core",
+      "io",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "io",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "printf(format: string, ...args: any[]): void"
+    }
+  },
+  {
+    "id": "v1-io-readAll",
+    "name": "readAll",
+    "aliases": [
+      "readAll",
+      "io_readAll"
+    ],
+    "category": "core",
+    "description": "Function readAll from io",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "Promise<string>",
+    "examples": [
+      {
+        "input": "Call readAll",
+        "output": "Promise<string>",
+        "description": "Basic usage of readAll"
+      }
+    ],
+    "tags": [
+      "core",
+      "io",
+      "async"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "io",
+      "isAsync": true,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "readAll(): Promise<string>"
+    }
+  },
+  {
+    "id": "v1-json-parse",
+    "name": "parse",
+    "aliases": [
+      "parse",
+      "json_parse"
+    ],
+    "category": "core",
+    "description": "Function parse from json",
+    "confidence": 0.93,
+    "inputTypes": "string",
+    "outputType": "JSONValue",
+    "examples": [
+      {
+        "input": "Call parse",
+        "output": "JSONValue",
+        "description": "Basic usage of parse"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "parse(jsonStr: string): JSONValue"
+    }
+  },
+  {
+    "id": "v1-json-stringify",
+    "name": "stringify",
+    "aliases": [
+      "stringify",
+      "json_stringify"
+    ],
+    "category": "core",
+    "description": "Function stringify from json",
+    "confidence": 0.93,
+    "inputTypes": "any, number",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call stringify",
+        "output": "string",
+        "description": "Basic usage of stringify"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "stringify(obj: any, indent?: number): string"
+    }
+  },
+  {
+    "id": "v1-json-format",
+    "name": "format",
+    "aliases": [
+      "format",
+      "json_format"
+    ],
+    "category": "core",
+    "description": "Function format from json",
+    "confidence": 0.93,
+    "inputTypes": "any, number = 2",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call format",
+        "output": "string",
+        "description": "Basic usage of format"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "format(obj: any, spaces: number = 2): string"
+    }
+  },
+  {
+    "id": "v1-json-minify",
+    "name": "minify",
+    "aliases": [
+      "minify",
+      "json_minify"
+    ],
+    "category": "core",
+    "description": "Function minify from json",
+    "confidence": 0.93,
+    "inputTypes": "any",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call minify",
+        "output": "string",
+        "description": "Basic usage of minify"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "minify(obj: any): string"
+    }
+  },
+  {
+    "id": "v1-json-isValid",
+    "name": "isValid",
+    "aliases": [
+      "isValid",
+      "json_isValid"
+    ],
+    "category": "core",
+    "description": "Function isValid from json",
+    "confidence": 0.93,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isValid",
+        "output": "boolean",
+        "description": "Basic usage of isValid"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isValid(jsonStr: string): boolean"
+    }
+  },
+  {
+    "id": "v1-json-equals",
+    "name": "equals",
+    "aliases": [
+      "equals",
+      "json_equals"
+    ],
+    "category": "core",
+    "description": "Function equals from json",
+    "confidence": 0.93,
+    "inputTypes": "any, any",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call equals",
+        "output": "boolean",
+        "description": "Basic usage of equals"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "equals(obj1: any, obj2: any): boolean"
+    }
+  },
+  {
+    "id": "v1-json-get",
+    "name": "get",
+    "aliases": [
+      "get",
+      "json_get"
+    ],
+    "category": "core",
+    "description": "Function get from json",
+    "confidence": 0.93,
+    "inputTypes": "any, string",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call get",
+        "output": "any",
+        "description": "Basic usage of get"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "get(obj: any, path: string): any"
+    }
+  },
+  {
+    "id": "v1-json-set",
+    "name": "set",
+    "aliases": [
+      "set",
+      "json_set"
+    ],
+    "category": "core",
+    "description": "Function set from json",
+    "confidence": 0.93,
+    "inputTypes": "any, string, any",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call set",
+        "output": "void",
+        "description": "Basic usage of set"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "set(obj: any, path: string, value: any): void"
+    }
+  },
+  {
+    "id": "v1-json-merge",
+    "name": "merge",
+    "aliases": [
+      "merge",
+      "json_merge"
+    ],
+    "category": "core",
+    "description": "Function merge from json",
+    "confidence": 0.93,
+    "inputTypes": "any, any",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call merge",
+        "output": "any",
+        "description": "Basic usage of merge"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "merge(target: any, source: any): any"
+    }
+  },
+  {
+    "id": "v1-json-deepMerge",
+    "name": "deepMerge",
+    "aliases": [
+      "deepMerge",
+      "json_deepMerge"
+    ],
+    "category": "core",
+    "description": "Function deepMerge from json",
+    "confidence": 0.93,
+    "inputTypes": "any, any",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call deepMerge",
+        "output": "any",
+        "description": "Basic usage of deepMerge"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "deepMerge(target: any, source: any): any"
+    }
+  },
+  {
+    "id": "v1-json-pick",
+    "name": "pick",
+    "aliases": [
+      "pick",
+      "json_pick"
+    ],
+    "category": "core",
+    "description": "Function pick from json",
+    "confidence": 0.93,
+    "inputTypes": "any, string[]",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call pick",
+        "output": "any",
+        "description": "Basic usage of pick"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "pick(obj: any, keys: string[]): any"
+    }
+  },
+  {
+    "id": "v1-json-omit",
+    "name": "omit",
+    "aliases": [
+      "omit",
+      "json_omit"
+    ],
+    "category": "core",
+    "description": "Function omit from json",
+    "confidence": 0.93,
+    "inputTypes": "any, string[]",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call omit",
+        "output": "any",
+        "description": "Basic usage of omit"
+      }
+    ],
+    "tags": [
+      "core",
+      "json",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "json",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "omit(obj: any, keys: string[]): any"
+    }
+  },
+  {
+    "id": "v1-math-abs",
+    "name": "abs",
+    "aliases": [
+      "abs",
+      "math_abs"
+    ],
+    "category": "core",
+    "description": "Function abs from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call abs",
+        "output": "number",
+        "description": "Basic usage of abs"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "abs(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-ceil",
+    "name": "ceil",
+    "aliases": [
+      "ceil",
+      "math_ceil"
+    ],
+    "category": "core",
+    "description": "Function ceil from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call ceil",
+        "output": "number",
+        "description": "Basic usage of ceil"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "ceil(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-floor",
+    "name": "floor",
+    "aliases": [
+      "floor",
+      "math_floor"
+    ],
+    "category": "core",
+    "description": "Function floor from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call floor",
+        "output": "number",
+        "description": "Basic usage of floor"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "floor(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-round",
+    "name": "round",
+    "aliases": [
+      "round",
+      "math_round"
+    ],
+    "category": "core",
+    "description": "Function round from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number = 0",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call round",
+        "output": "number",
+        "description": "Basic usage of round"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "round(x: number, decimals: number = 0): number"
+    }
+  },
+  {
+    "id": "v1-math-sqrt",
+    "name": "sqrt",
+    "aliases": [
+      "sqrt",
+      "math_sqrt"
+    ],
+    "category": "core",
+    "description": "Function sqrt from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call sqrt",
+        "output": "number",
+        "description": "Basic usage of sqrt"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "sqrt(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-cbrt",
+    "name": "cbrt",
+    "aliases": [
+      "cbrt",
+      "math_cbrt"
+    ],
+    "category": "core",
+    "description": "Function cbrt from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call cbrt",
+        "output": "number",
+        "description": "Basic usage of cbrt"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "cbrt(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-pow",
+    "name": "pow",
+    "aliases": [
+      "pow",
+      "math_pow"
+    ],
+    "category": "core",
+    "description": "Function pow from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call pow",
+        "output": "number",
+        "description": "Basic usage of pow"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "pow(base: number, exponent: number): number"
+    }
+  },
+  {
+    "id": "v1-math-ln",
+    "name": "ln",
+    "aliases": [
+      "ln",
+      "math_ln"
+    ],
+    "category": "core",
+    "description": "Function ln from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call ln",
+        "output": "number",
+        "description": "Basic usage of ln"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "ln(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-log10",
+    "name": "log10",
+    "aliases": [
+      "log10",
+      "math_log10"
+    ],
+    "category": "core",
+    "description": "Function log10 from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call log10",
+        "output": "number",
+        "description": "Basic usage of log10"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "log10(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-log2",
+    "name": "log2",
+    "aliases": [
+      "log2",
+      "math_log2"
+    ],
+    "category": "core",
+    "description": "Function log2 from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call log2",
+        "output": "number",
+        "description": "Basic usage of log2"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "log2(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-log",
+    "name": "log",
+    "aliases": [
+      "log",
+      "math_log"
+    ],
+    "category": "core",
+    "description": "Function log from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number = Math.E",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call log",
+        "output": "number",
+        "description": "Basic usage of log"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "log(x: number, base: number = Math.E): number"
+    }
+  },
+  {
+    "id": "v1-math-exp",
+    "name": "exp",
+    "aliases": [
+      "exp",
+      "math_exp"
+    ],
+    "category": "core",
+    "description": "Function exp from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call exp",
+        "output": "number",
+        "description": "Basic usage of exp"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "exp(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-sin",
+    "name": "sin",
+    "aliases": [
+      "sin",
+      "math_sin"
+    ],
+    "category": "core",
+    "description": "Function sin from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call sin",
+        "output": "number",
+        "description": "Basic usage of sin"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "sin(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-cos",
+    "name": "cos",
+    "aliases": [
+      "cos",
+      "math_cos"
+    ],
+    "category": "core",
+    "description": "Function cos from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call cos",
+        "output": "number",
+        "description": "Basic usage of cos"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "cos(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-tan",
+    "name": "tan",
+    "aliases": [
+      "tan",
+      "math_tan"
+    ],
+    "category": "core",
+    "description": "Function tan from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call tan",
+        "output": "number",
+        "description": "Basic usage of tan"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "tan(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-asin",
+    "name": "asin",
+    "aliases": [
+      "asin",
+      "math_asin"
+    ],
+    "category": "core",
+    "description": "Function asin from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call asin",
+        "output": "number",
+        "description": "Basic usage of asin"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "asin(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-acos",
+    "name": "acos",
+    "aliases": [
+      "acos",
+      "math_acos"
+    ],
+    "category": "core",
+    "description": "Function acos from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call acos",
+        "output": "number",
+        "description": "Basic usage of acos"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "acos(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-atan",
+    "name": "atan",
+    "aliases": [
+      "atan",
+      "math_atan"
+    ],
+    "category": "core",
+    "description": "Function atan from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call atan",
+        "output": "number",
+        "description": "Basic usage of atan"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "atan(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-atan2",
+    "name": "atan2",
+    "aliases": [
+      "atan2",
+      "math_atan2"
+    ],
+    "category": "core",
+    "description": "Function atan2 from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call atan2",
+        "output": "number",
+        "description": "Basic usage of atan2"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "atan2(y: number, x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-sinh",
+    "name": "sinh",
+    "aliases": [
+      "sinh",
+      "math_sinh"
+    ],
+    "category": "core",
+    "description": "Function sinh from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call sinh",
+        "output": "number",
+        "description": "Basic usage of sinh"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "sinh(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-cosh",
+    "name": "cosh",
+    "aliases": [
+      "cosh",
+      "math_cosh"
+    ],
+    "category": "core",
+    "description": "Function cosh from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call cosh",
+        "output": "number",
+        "description": "Basic usage of cosh"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "cosh(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-tanh",
+    "name": "tanh",
+    "aliases": [
+      "tanh",
+      "math_tanh"
+    ],
+    "category": "core",
+    "description": "Function tanh from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call tanh",
+        "output": "number",
+        "description": "Basic usage of tanh"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "tanh(x: number): number"
+    }
+  },
+  {
+    "id": "v1-math-max",
+    "name": "max",
+    "aliases": [
+      "max",
+      "math_max"
+    ],
+    "category": "core",
+    "description": "Function max from math",
+    "confidence": 0.9,
+    "inputTypes": "number[]",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call max",
+        "output": "number",
+        "description": "Basic usage of max"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "max(...values: number[]): number"
+    }
+  },
+  {
+    "id": "v1-math-min",
+    "name": "min",
+    "aliases": [
+      "min",
+      "math_min"
+    ],
+    "category": "core",
+    "description": "Function min from math",
+    "confidence": 0.9,
+    "inputTypes": "number[]",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call min",
+        "output": "number",
+        "description": "Basic usage of min"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "min(...values: number[]): number"
+    }
+  },
+  {
+    "id": "v1-math-sum",
+    "name": "sum",
+    "aliases": [
+      "sum",
+      "math_sum"
+    ],
+    "category": "core",
+    "description": "Function sum from math",
+    "confidence": 0.9,
+    "inputTypes": "number[]",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call sum",
+        "output": "number",
+        "description": "Basic usage of sum"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "sum(values: number[]): number"
+    }
+  },
+  {
+    "id": "v1-math-avg",
+    "name": "avg",
+    "aliases": [
+      "avg",
+      "math_avg"
+    ],
+    "category": "core",
+    "description": "Function avg from math",
+    "confidence": 0.9,
+    "inputTypes": "number[]",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call avg",
+        "output": "number",
+        "description": "Basic usage of avg"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "avg(values: number[]): number"
+    }
+  },
+  {
+    "id": "v1-math-median",
+    "name": "median",
+    "aliases": [
+      "median",
+      "math_median"
+    ],
+    "category": "core",
+    "description": "Function median from math",
+    "confidence": 0.9,
+    "inputTypes": "number[]",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call median",
+        "output": "number",
+        "description": "Basic usage of median"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "median(values: number[]): number"
+    }
+  },
+  {
+    "id": "v1-math-stdDev",
+    "name": "stdDev",
+    "aliases": [
+      "stdDev",
+      "math_stdDev"
+    ],
+    "category": "core",
+    "description": "Function stdDev from math",
+    "confidence": 0.9,
+    "inputTypes": "number[]",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call stdDev",
+        "output": "number",
+        "description": "Basic usage of stdDev"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "stdDev(values: number[]): number"
+    }
+  },
+  {
+    "id": "v1-math-random",
+    "name": "random",
+    "aliases": [
+      "random",
+      "math_random"
+    ],
+    "category": "core",
+    "description": "Function random from math",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call random",
+        "output": "number",
+        "description": "Basic usage of random"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "random(): number"
+    }
+  },
+  {
+    "id": "v1-math-randomRange",
+    "name": "randomRange",
+    "aliases": [
+      "randomRange",
+      "math_randomRange"
+    ],
+    "category": "core",
+    "description": "Function randomRange from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call randomRange",
+        "output": "number",
+        "description": "Basic usage of randomRange"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "randomRange(min: number, max: number): number"
+    }
+  },
+  {
+    "id": "v1-math-randomInt",
+    "name": "randomInt",
+    "aliases": [
+      "randomInt",
+      "math_randomInt"
+    ],
+    "category": "core",
+    "description": "Function randomInt from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call randomInt",
+        "output": "number",
+        "description": "Basic usage of randomInt"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "randomInt(min: number, max: number): number"
+    }
+  },
+  {
+    "id": "v1-math-toDegrees",
+    "name": "toDegrees",
+    "aliases": [
+      "toDegrees",
+      "math_toDegrees"
+    ],
+    "category": "core",
+    "description": "Function toDegrees from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call toDegrees",
+        "output": "number",
+        "description": "Basic usage of toDegrees"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toDegrees(radians: number): number"
+    }
+  },
+  {
+    "id": "v1-math-toRadians",
+    "name": "toRadians",
+    "aliases": [
+      "toRadians",
+      "math_toRadians"
+    ],
+    "category": "core",
+    "description": "Function toRadians from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call toRadians",
+        "output": "number",
+        "description": "Basic usage of toRadians"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "toRadians(degrees: number): number"
+    }
+  },
+  {
+    "id": "v1-math-distance",
+    "name": "distance",
+    "aliases": [
+      "distance",
+      "math_distance"
+    ],
+    "category": "core",
+    "description": "Function distance from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number, number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call distance",
+        "output": "number",
+        "description": "Basic usage of distance"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 4,
+      "signature": "distance(x1: number, y1: number, x2: number, y2: number): number"
+    }
+  },
+  {
+    "id": "v1-math-combination",
+    "name": "combination",
+    "aliases": [
+      "combination",
+      "math_combination"
+    ],
+    "category": "core",
+    "description": "Function combination from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call combination",
+        "output": "number",
+        "description": "Basic usage of combination"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "combination(n: number, r: number): number"
+    }
+  },
+  {
+    "id": "v1-math-permutation",
+    "name": "permutation",
+    "aliases": [
+      "permutation",
+      "math_permutation"
+    ],
+    "category": "core",
+    "description": "Function permutation from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call permutation",
+        "output": "number",
+        "description": "Basic usage of permutation"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "permutation(n: number, r: number): number"
+    }
+  },
+  {
+    "id": "v1-math-factorial",
+    "name": "factorial",
+    "aliases": [
+      "factorial",
+      "math_factorial"
+    ],
+    "category": "core",
+    "description": "Function factorial from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call factorial",
+        "output": "number",
+        "description": "Basic usage of factorial"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "factorial(n: number): number"
+    }
+  },
+  {
+    "id": "v1-math-gcd",
+    "name": "gcd",
+    "aliases": [
+      "gcd",
+      "math_gcd"
+    ],
+    "category": "core",
+    "description": "Function gcd from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call gcd",
+        "output": "number",
+        "description": "Basic usage of gcd"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "gcd(a: number, b: number): number"
+    }
+  },
+  {
+    "id": "v1-math-lcm",
+    "name": "lcm",
+    "aliases": [
+      "lcm",
+      "math_lcm"
+    ],
+    "category": "core",
+    "description": "Function lcm from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call lcm",
+        "output": "number",
+        "description": "Basic usage of lcm"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "lcm(a: number, b: number): number"
+    }
+  },
+  {
+    "id": "v1-math-isPrime",
+    "name": "isPrime",
+    "aliases": [
+      "isPrime",
+      "math_isPrime"
+    ],
+    "category": "core",
+    "description": "Function isPrime from math",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isPrime",
+        "output": "boolean",
+        "description": "Basic usage of isPrime"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isPrime(n: number): boolean"
+    }
+  },
+  {
+    "id": "v1-math-clamp",
+    "name": "clamp",
+    "aliases": [
+      "clamp",
+      "math_clamp"
+    ],
+    "category": "core",
+    "description": "Function clamp from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call clamp",
+        "output": "number",
+        "description": "Basic usage of clamp"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "clamp(value: number, min: number, max: number): number"
+    }
+  },
+  {
+    "id": "v1-math-lerp",
+    "name": "lerp",
+    "aliases": [
+      "lerp",
+      "math_lerp"
+    ],
+    "category": "core",
+    "description": "Function lerp from math",
+    "confidence": 0.9,
+    "inputTypes": "number, number, number",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call lerp",
+        "output": "number",
+        "description": "Basic usage of lerp"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "lerp(start: number, end: number, t: number): number"
+    }
+  },
+  {
+    "id": "v1-math-PI",
+    "name": "PI",
+    "aliases": [
+      "PI",
+      "math_PI"
+    ],
+    "category": "core",
+    "description": "Constant PI from math",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call PI",
+        "output": "any",
+        "description": "Basic usage of PI"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": true,
+      "paramCount": 0,
+      "signature": "const PI = Math.PI..."
+    }
+  },
+  {
+    "id": "v1-math-E",
+    "name": "E",
+    "aliases": [
+      "E",
+      "math_E"
+    ],
+    "category": "core",
+    "description": "Constant E from math",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call E",
+        "output": "any",
+        "description": "Basic usage of E"
+      }
+    ],
+    "tags": [
+      "core",
+      "math",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "math",
+      "isAsync": false,
+      "isConstant": true,
+      "paramCount": 0,
+      "signature": "const E = Math.E..."
+    }
+  },
+  {
+    "id": "v1-os-platform",
+    "name": "platform",
+    "aliases": [
+      "platform",
+      "os_platform"
+    ],
+    "category": "core",
+    "description": "Function platform from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call platform",
+        "output": "string",
+        "description": "Basic usage of platform"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "platform(): string"
+    }
+  },
+  {
+    "id": "v1-os-arch",
+    "name": "arch",
+    "aliases": [
+      "arch",
+      "os_arch"
+    ],
+    "category": "core",
+    "description": "Function arch from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call arch",
+        "output": "string",
+        "description": "Basic usage of arch"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "arch(): string"
+    }
+  },
+  {
+    "id": "v1-os-homeDir",
+    "name": "homeDir",
+    "aliases": [
+      "homeDir",
+      "os_homeDir"
+    ],
+    "category": "core",
+    "description": "Function homeDir from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call homeDir",
+        "output": "string",
+        "description": "Basic usage of homeDir"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "homeDir(): string"
+    }
+  },
+  {
+    "id": "v1-os-tempDir",
+    "name": "tempDir",
+    "aliases": [
+      "tempDir",
+      "os_tempDir"
+    ],
+    "category": "core",
+    "description": "Function tempDir from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call tempDir",
+        "output": "string",
+        "description": "Basic usage of tempDir"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "tempDir(): string"
+    }
+  },
+  {
+    "id": "v1-os-envs",
+    "name": "envs",
+    "aliases": [
+      "envs",
+      "os_envs"
+    ],
+    "category": "core",
+    "description": "Function envs from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "Record<string, string>",
+    "examples": [
+      {
+        "input": "Call envs",
+        "output": "Record<string, string>",
+        "description": "Basic usage of envs"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "envs(): Record<string, string>"
+    }
+  },
+  {
+    "id": "v1-os-setEnv",
+    "name": "setEnv",
+    "aliases": [
+      "setEnv",
+      "os_setEnv"
+    ],
+    "category": "core",
+    "description": "Function setEnv from os",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call setEnv",
+        "output": "void",
+        "description": "Basic usage of setEnv"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "setEnv(name: string, value: string): void"
+    }
+  },
+  {
+    "id": "v1-os-cwd",
+    "name": "cwd",
+    "aliases": [
+      "cwd",
+      "os_cwd"
+    ],
+    "category": "core",
+    "description": "Function cwd from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call cwd",
+        "output": "string",
+        "description": "Basic usage of cwd"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "cwd(): string"
+    }
+  },
+  {
+    "id": "v1-os-chdir",
+    "name": "chdir",
+    "aliases": [
+      "chdir",
+      "os_chdir"
+    ],
+    "category": "core",
+    "description": "Function chdir from os",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call chdir",
+        "output": "void",
+        "description": "Basic usage of chdir"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "chdir(dir: string): void"
+    }
+  },
+  {
+    "id": "v1-os-pid",
+    "name": "pid",
+    "aliases": [
+      "pid",
+      "os_pid"
+    ],
+    "category": "core",
+    "description": "Function pid from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call pid",
+        "output": "number",
+        "description": "Basic usage of pid"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "pid(): number"
+    }
+  },
+  {
+    "id": "v1-os-ppid",
+    "name": "ppid",
+    "aliases": [
+      "ppid",
+      "os_ppid"
+    ],
+    "category": "core",
+    "description": "Function ppid from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call ppid",
+        "output": "number",
+        "description": "Basic usage of ppid"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "ppid(): number"
+    }
+  },
+  {
+    "id": "v1-os-cpuCount",
+    "name": "cpuCount",
+    "aliases": [
+      "cpuCount",
+      "os_cpuCount"
+    ],
+    "category": "core",
+    "description": "Function cpuCount from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call cpuCount",
+        "output": "number",
+        "description": "Basic usage of cpuCount"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "cpuCount(): number"
+    }
+  },
+  {
+    "id": "v1-os-totalMemory",
+    "name": "totalMemory",
+    "aliases": [
+      "totalMemory",
+      "os_totalMemory"
+    ],
+    "category": "core",
+    "description": "Function totalMemory from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call totalMemory",
+        "output": "number",
+        "description": "Basic usage of totalMemory"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "totalMemory(): number"
+    }
+  },
+  {
+    "id": "v1-os-freeMemory",
+    "name": "freeMemory",
+    "aliases": [
+      "freeMemory",
+      "os_freeMemory"
+    ],
+    "category": "core",
+    "description": "Function freeMemory from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call freeMemory",
+        "output": "number",
+        "description": "Basic usage of freeMemory"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "freeMemory(): number"
+    }
+  },
+  {
+    "id": "v1-os-hostname",
+    "name": "hostname",
+    "aliases": [
+      "hostname",
+      "os_hostname"
+    ],
+    "category": "core",
+    "description": "Function hostname from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call hostname",
+        "output": "string",
+        "description": "Basic usage of hostname"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "hostname(): string"
+    }
+  },
+  {
+    "id": "v1-os-uptime",
+    "name": "uptime",
+    "aliases": [
+      "uptime",
+      "os_uptime"
+    ],
+    "category": "core",
+    "description": "Function uptime from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call uptime",
+        "output": "number",
+        "description": "Basic usage of uptime"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "uptime(): number"
+    }
+  },
+  {
+    "id": "v1-os-version",
+    "name": "version",
+    "aliases": [
+      "version",
+      "os_version"
+    ],
+    "category": "core",
+    "description": "Function version from os",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call version",
+        "output": "string",
+        "description": "Basic usage of version"
+      }
+    ],
+    "tags": [
+      "core",
+      "os",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "os",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "version(): string"
+    }
+  },
+  {
+    "id": "v1-path-join",
+    "name": "join",
+    "aliases": [
+      "join",
+      "path_join"
+    ],
+    "category": "core",
+    "description": "Function join from path",
+    "confidence": 0.9,
+    "inputTypes": "string[]",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call join",
+        "output": "string",
+        "description": "Basic usage of join"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "join(...parts: string[]): string"
+    }
+  },
+  {
+    "id": "v1-path-resolve",
+    "name": "resolve",
+    "aliases": [
+      "resolve",
+      "path_resolve"
+    ],
+    "category": "core",
+    "description": "Function resolve from path",
+    "confidence": 0.9,
+    "inputTypes": "string[]",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call resolve",
+        "output": "string",
+        "description": "Basic usage of resolve"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "resolve(...parts: string[]): string"
+    }
+  },
+  {
+    "id": "v1-path-dirname",
+    "name": "dirname",
+    "aliases": [
+      "dirname",
+      "path_dirname"
+    ],
+    "category": "core",
+    "description": "Function dirname from path",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call dirname",
+        "output": "string",
+        "description": "Basic usage of dirname"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "dirname(filePath: string): string"
+    }
+  },
+  {
+    "id": "v1-path-basename",
+    "name": "basename",
+    "aliases": [
+      "basename",
+      "path_basename"
+    ],
+    "category": "core",
+    "description": "Function basename from path",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call basename",
+        "output": "string",
+        "description": "Basic usage of basename"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "basename(filePath: string, ext?: string): string"
+    }
+  },
+  {
+    "id": "v1-path-extname",
+    "name": "extname",
+    "aliases": [
+      "extname",
+      "path_extname"
+    ],
+    "category": "core",
+    "description": "Function extname from path",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call extname",
+        "output": "string",
+        "description": "Basic usage of extname"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "extname(filePath: string): string"
+    }
+  },
+  {
+    "id": "v1-path-normalize",
+    "name": "normalize",
+    "aliases": [
+      "normalize",
+      "path_normalize"
+    ],
+    "category": "core",
+    "description": "Function normalize from path",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call normalize",
+        "output": "string",
+        "description": "Basic usage of normalize"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "normalize(filePath: string): string"
+    }
+  },
+  {
+    "id": "v1-path-relative",
+    "name": "relative",
+    "aliases": [
+      "relative",
+      "path_relative"
+    ],
+    "category": "core",
+    "description": "Function relative from path",
+    "confidence": 0.9,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call relative",
+        "output": "string",
+        "description": "Basic usage of relative"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "relative(from: string, to: string): string"
+    }
+  },
+  {
+    "id": "v1-path-separator",
+    "name": "separator",
+    "aliases": [
+      "separator",
+      "path_separator"
+    ],
+    "category": "core",
+    "description": "Function separator from path",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call separator",
+        "output": "string",
+        "description": "Basic usage of separator"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "separator(): string"
+    }
+  },
+  {
+    "id": "v1-path-pathSeparator",
+    "name": "pathSeparator",
+    "aliases": [
+      "pathSeparator",
+      "path_pathSeparator"
+    ],
+    "category": "core",
+    "description": "Function pathSeparator from path",
+    "confidence": 0.9,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call pathSeparator",
+        "output": "string",
+        "description": "Basic usage of pathSeparator"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "pathSeparator(): string"
+    }
+  },
+  {
+    "id": "v1-path-isAbsolute",
+    "name": "isAbsolute",
+    "aliases": [
+      "isAbsolute",
+      "path_isAbsolute"
+    ],
+    "category": "core",
+    "description": "Function isAbsolute from path",
+    "confidence": 0.9,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isAbsolute",
+        "output": "boolean",
+        "description": "Basic usage of isAbsolute"
+      }
+    ],
+    "tags": [
+      "core",
+      "path",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "path",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isAbsolute(filePath: string): boolean"
+    }
+  },
+  {
+    "id": "v1-prometheus-getRegistry",
+    "name": "getRegistry",
+    "aliases": [
+      "getRegistry",
+      "prometheus_getRegistry"
+    ],
+    "category": "infrastructure",
+    "description": "Function getRegistry from prometheus",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "Registry",
+    "examples": [
+      {
+        "input": "Call getRegistry",
+        "output": "Registry",
+        "description": "Basic usage of getRegistry"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "prometheus",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "prometheus",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "getRegistry(): Registry"
+    }
+  },
+  {
+    "id": "v1-prometheus-createCounter",
+    "name": "createCounter",
+    "aliases": [
+      "createCounter",
+      "prometheus_createCounter"
+    ],
+    "category": "infrastructure",
+    "description": "Function createCounter from prometheus",
+    "confidence": 0.92,
+    "inputTypes": "string, string, Labels",
+    "outputType": "Counter",
+    "examples": [
+      {
+        "input": "Call createCounter",
+        "output": "Counter",
+        "description": "Basic usage of createCounter"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "prometheus",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "prometheus",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "createCounter(name: string, help: string, labels?: Labels): Counter"
+    }
+  },
+  {
+    "id": "v1-prometheus-createGauge",
+    "name": "createGauge",
+    "aliases": [
+      "createGauge",
+      "prometheus_createGauge"
+    ],
+    "category": "infrastructure",
+    "description": "Function createGauge from prometheus",
+    "confidence": 0.92,
+    "inputTypes": "string, string, Labels",
+    "outputType": "Gauge",
+    "examples": [
+      {
+        "input": "Call createGauge",
+        "output": "Gauge",
+        "description": "Basic usage of createGauge"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "prometheus",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "prometheus",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "createGauge(name: string, help: string, labels?: Labels): Gauge"
+    }
+  },
+  {
+    "id": "v1-prometheus-createHistogram",
+    "name": "createHistogram",
+    "aliases": [
+      "createHistogram",
+      "prometheus_createHistogram"
+    ],
+    "category": "infrastructure",
+    "description": "Function createHistogram from prometheus",
+    "confidence": 0.92,
+    "inputTypes": "string, string, number[], Labels",
+    "outputType": "Histogram",
+    "examples": [
+      {
+        "input": "Call createHistogram",
+        "output": "Histogram",
+        "description": "Basic usage of createHistogram"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "prometheus",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "prometheus",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 4,
+      "signature": "createHistogram(name: string, help: string, buckets?: number[], labels?: Labels): Histogram"
+    }
+  },
+  {
+    "id": "v1-prometheus-createSummary",
+    "name": "createSummary",
+    "aliases": [
+      "createSummary",
+      "prometheus_createSummary"
+    ],
+    "category": "infrastructure",
+    "description": "Function createSummary from prometheus",
+    "confidence": 0.92,
+    "inputTypes": "string, string, Labels",
+    "outputType": "Summary",
+    "examples": [
+      {
+        "input": "Call createSummary",
+        "output": "Summary",
+        "description": "Basic usage of createSummary"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "prometheus",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "prometheus",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "createSummary(name: string, help: string, labels?: Labels): Summary"
+    }
+  },
+  {
+    "id": "v1-prometheus-toPrometheusText",
+    "name": "toPrometheusText",
+    "aliases": [
+      "toPrometheusText",
+      "prometheus_toPrometheusText"
+    ],
+    "category": "infrastructure",
+    "description": "Function toPrometheusText from prometheus",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call toPrometheusText",
+        "output": "string",
+        "description": "Basic usage of toPrometheusText"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "prometheus",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "prometheus",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "toPrometheusText(): string"
+    }
+  },
+  {
+    "id": "v1-swagger-generateSwaggerUI",
+    "name": "generateSwaggerUI",
+    "aliases": [
+      "generateSwaggerUI",
+      "swagger_generateSwaggerUI"
+    ],
+    "category": "infrastructure",
+    "description": "Function generateSwaggerUI from swagger",
+    "confidence": 0.9,
+    "inputTypes": "string, string = 'API Documentation'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call generateSwaggerUI",
+        "output": "string",
+        "description": "Basic usage of generateSwaggerUI"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "swagger",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "swagger",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "generateSwaggerUI(specUrl: string, title: string = 'API Documentation'): string"
+    }
+  },
+  {
+    "id": "v1-swagger-generateReDocUI",
+    "name": "generateReDocUI",
+    "aliases": [
+      "generateReDocUI",
+      "swagger_generateReDocUI"
+    ],
+    "category": "infrastructure",
+    "description": "Function generateReDocUI from swagger",
+    "confidence": 0.9,
+    "inputTypes": "string, string = 'API Documentation'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call generateReDocUI",
+        "output": "string",
+        "description": "Basic usage of generateReDocUI"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "swagger",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "swagger",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "generateReDocUI(specUrl: string, title: string = 'API Documentation'): string"
+    }
+  },
+  {
+    "id": "v1-url-parse",
+    "name": "parse",
+    "aliases": [
+      "parse",
+      "url_parse"
+    ],
+    "category": "network",
+    "description": "Function parse from url",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "URLInfo",
+    "examples": [
+      {
+        "input": "Call parse",
+        "output": "URLInfo",
+        "description": "Basic usage of parse"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "parse(urlStr: string): URLInfo"
+    }
+  },
+  {
+    "id": "v1-url-build",
+    "name": "build",
+    "aliases": [
+      "build",
+      "url_build"
+    ],
+    "category": "network",
+    "description": "Function build from url",
+    "confidence": 0.92,
+    "inputTypes": "Partial<URLInfo>",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call build",
+        "output": "string",
+        "description": "Basic usage of build"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "build(info: Partial<URLInfo>): string"
+    }
+  },
+  {
+    "id": "v1-url-parseQuery",
+    "name": "parseQuery",
+    "aliases": [
+      "parseQuery",
+      "url_parseQuery"
+    ],
+    "category": "network",
+    "description": "Function parseQuery from url",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "Record<string, string | string[]>",
+    "examples": [
+      {
+        "input": "Call parseQuery",
+        "output": "Record<string, string | string[]>",
+        "description": "Basic usage of parseQuery"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "parseQuery(queryStr: string): Record<string, string | string[]>"
+    }
+  },
+  {
+    "id": "v1-url-buildQuery",
+    "name": "buildQuery",
+    "aliases": [
+      "buildQuery",
+      "url_buildQuery"
+    ],
+    "category": "network",
+    "description": "Function buildQuery from url",
+    "confidence": 0.92,
+    "inputTypes": "Record<string, any",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call buildQuery",
+        "output": "string",
+        "description": "Basic usage of buildQuery"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "buildQuery(params: Record<string, string | string[] | number | boolean>): string"
+    }
+  },
+  {
+    "id": "v1-url-encode",
+    "name": "encode",
+    "aliases": [
+      "encode",
+      "url_encode"
+    ],
+    "category": "network",
+    "description": "Function encode from url",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call encode",
+        "output": "string",
+        "description": "Basic usage of encode"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "encode(str: string): string"
+    }
+  },
+  {
+    "id": "v1-url-decode",
+    "name": "decode",
+    "aliases": [
+      "decode",
+      "url_decode"
+    ],
+    "category": "network",
+    "description": "Function decode from url",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call decode",
+        "output": "string",
+        "description": "Basic usage of decode"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "decode(str: string): string"
+    }
+  },
+  {
+    "id": "v1-url-resolve",
+    "name": "resolve",
+    "aliases": [
+      "resolve",
+      "url_resolve"
+    ],
+    "category": "network",
+    "description": "Function resolve from url",
+    "confidence": 0.92,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call resolve",
+        "output": "string",
+        "description": "Basic usage of resolve"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "resolve(baseUrl: string, relativeUrl: string): string"
+    }
+  },
+  {
+    "id": "v1-url-isValid",
+    "name": "isValid",
+    "aliases": [
+      "isValid",
+      "url_isValid"
+    ],
+    "category": "network",
+    "description": "Function isValid from url",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isValid",
+        "output": "boolean",
+        "description": "Basic usage of isValid"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isValid(urlStr: string): boolean"
+    }
+  },
+  {
+    "id": "v1-url-normalize",
+    "name": "normalize",
+    "aliases": [
+      "normalize",
+      "url_normalize"
+    ],
+    "category": "network",
+    "description": "Function normalize from url",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call normalize",
+        "output": "string",
+        "description": "Basic usage of normalize"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "normalize(urlStr: string): string"
+    }
+  },
+  {
+    "id": "v1-url-equals",
+    "name": "equals",
+    "aliases": [
+      "equals",
+      "url_equals"
+    ],
+    "category": "network",
+    "description": "Function equals from url",
+    "confidence": 0.92,
+    "inputTypes": "string, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call equals",
+        "output": "boolean",
+        "description": "Basic usage of equals"
+      }
+    ],
+    "tags": [
+      "network",
+      "url",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "url",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "equals(url1: string, url2: string): boolean"
+    }
+  },
+  {
+    "id": "v1-aes-decrypt",
+    "name": "decrypt",
+    "aliases": [
+      "decrypt",
+      "aes_decrypt"
+    ],
+    "category": "security",
+    "description": "Function decrypt from aes",
+    "confidence": 0.895,
+    "inputTypes": "string, string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call decrypt",
+        "output": "string",
+        "description": "Basic usage of decrypt"
+      }
+    ],
+    "tags": [
+      "security",
+      "aes",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "aes",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "decrypt(encrypted: string, key: string, iv: string): string"
+    }
+  },
+  {
+    "id": "v1-aes-decryptGCM",
+    "name": "decryptGCM",
+    "aliases": [
+      "decryptGCM",
+      "aes_decryptGCM"
+    ],
+    "category": "security",
+    "description": "Function decryptGCM from aes",
+    "confidence": 0.895,
+    "inputTypes": "string, string, string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call decryptGCM",
+        "output": "string",
+        "description": "Basic usage of decryptGCM"
+      }
+    ],
+    "tags": [
+      "security",
+      "aes",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "aes",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 4,
+      "signature": "decryptGCM(encrypted: string, key: string, iv: string, authTag: string): string"
+    }
+  },
+  {
+    "id": "v1-aes-generateKey",
+    "name": "generateKey",
+    "aliases": [
+      "generateKey",
+      "aes_generateKey"
+    ],
+    "category": "security",
+    "description": "Function generateKey from aes",
+    "confidence": 0.895,
+    "inputTypes": "number = 32",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call generateKey",
+        "output": "string",
+        "description": "Basic usage of generateKey"
+      }
+    ],
+    "tags": [
+      "security",
+      "aes",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "aes",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "generateKey(length: number = 32): string"
+    }
+  },
+  {
+    "id": "v1-aes-deriveKey",
+    "name": "deriveKey",
+    "aliases": [
+      "deriveKey",
+      "aes_deriveKey"
+    ],
+    "category": "security",
+    "description": "Function deriveKey from aes",
+    "confidence": 0.895,
+    "inputTypes": "string, number = 32",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call deriveKey",
+        "output": "string",
+        "description": "Basic usage of deriveKey"
+      }
+    ],
+    "tags": [
+      "security",
+      "aes",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "aes",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "deriveKey(seed: string, length: number = 32): string"
+    }
+  },
+  {
+    "id": "v1-aes-simple_encrypt",
+    "name": "simple_encrypt",
+    "aliases": [
+      "simple_encrypt",
+      "aes_simple_encrypt"
+    ],
+    "category": "security",
+    "description": "Function simple_encrypt from aes",
+    "confidence": 0.895,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call simple_encrypt",
+        "output": "string",
+        "description": "Basic usage of simple_encrypt"
+      }
+    ],
+    "tags": [
+      "security",
+      "aes",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "aes",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "simple_encrypt(plaintext: string, password: string): string"
+    }
+  },
+  {
+    "id": "v1-aes-simple_decrypt",
+    "name": "simple_decrypt",
+    "aliases": [
+      "simple_decrypt",
+      "aes_simple_decrypt"
+    ],
+    "category": "security",
+    "description": "Function simple_decrypt from aes",
+    "confidence": 0.895,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call simple_decrypt",
+        "output": "string",
+        "description": "Basic usage of simple_decrypt"
+      }
+    ],
+    "tags": [
+      "security",
+      "aes",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "aes",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "simple_decrypt(ciphertext: string, password: string): string"
+    }
+  },
+  {
+    "id": "v1-bcrypt-genSalt",
+    "name": "genSalt",
+    "aliases": [
+      "genSalt",
+      "bcrypt_genSalt"
+    ],
+    "category": "security",
+    "description": "Function genSalt from bcrypt",
+    "confidence": 0.92,
+    "inputTypes": "number = 10",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call genSalt",
+        "output": "string",
+        "description": "Basic usage of genSalt"
+      }
+    ],
+    "tags": [
+      "security",
+      "bcrypt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "bcrypt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "genSalt(rounds: number = 10): string"
+    }
+  },
+  {
+    "id": "v1-bcrypt-hash",
+    "name": "hash",
+    "aliases": [
+      "hash",
+      "bcrypt_hash"
+    ],
+    "category": "security",
+    "description": "Function hash from bcrypt",
+    "confidence": 0.92,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call hash",
+        "output": "string",
+        "description": "Basic usage of hash"
+      }
+    ],
+    "tags": [
+      "security",
+      "bcrypt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "bcrypt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "hash(password: string, salt?: string): string"
+    }
+  },
+  {
+    "id": "v1-bcrypt-compare",
+    "name": "compare",
+    "aliases": [
+      "compare",
+      "bcrypt_compare"
+    ],
+    "category": "security",
+    "description": "Function compare from bcrypt",
+    "confidence": 0.92,
+    "inputTypes": "string, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call compare",
+        "output": "boolean",
+        "description": "Basic usage of compare"
+      }
+    ],
+    "tags": [
+      "security",
+      "bcrypt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "bcrypt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "compare(password: string, hash_value: string): boolean"
+    }
+  },
+  {
+    "id": "v1-bcrypt-getRounds",
+    "name": "getRounds",
+    "aliases": [
+      "getRounds",
+      "bcrypt_getRounds"
+    ],
+    "category": "security",
+    "description": "Function getRounds from bcrypt",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call getRounds",
+        "output": "number",
+        "description": "Basic usage of getRounds"
+      }
+    ],
+    "tags": [
+      "security",
+      "bcrypt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "bcrypt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "getRounds(hash_value: string): number"
+    }
+  },
+  {
+    "id": "v1-bcrypt-isRoundsValid",
+    "name": "isRoundsValid",
+    "aliases": [
+      "isRoundsValid",
+      "bcrypt_isRoundsValid"
+    ],
+    "category": "security",
+    "description": "Function isRoundsValid from bcrypt",
+    "confidence": 0.92,
+    "inputTypes": "string, number = 10",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isRoundsValid",
+        "output": "boolean",
+        "description": "Basic usage of isRoundsValid"
+      }
+    ],
+    "tags": [
+      "security",
+      "bcrypt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "bcrypt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "isRoundsValid(hash_value: string, minRounds: number = 10): boolean"
+    }
+  },
+  {
+    "id": "v1-bcrypt-needsRehash",
+    "name": "needsRehash",
+    "aliases": [
+      "needsRehash",
+      "bcrypt_needsRehash"
+    ],
+    "category": "security",
+    "description": "Function needsRehash from bcrypt",
+    "confidence": 0.92,
+    "inputTypes": "string, number = 12",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call needsRehash",
+        "output": "boolean",
+        "description": "Basic usage of needsRehash"
+      }
+    ],
+    "tags": [
+      "security",
+      "bcrypt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "bcrypt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "needsRehash(hash_value: string, newRounds: number = 12): boolean"
+    }
+  },
+  {
+    "id": "v1-bcrypt-strengthCheck",
+    "name": "strengthCheck",
+    "aliases": [
+      "strengthCheck",
+      "bcrypt_strengthCheck"
+    ],
+    "category": "security",
+    "description": "Function strengthCheck from bcrypt",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "number",
+    "examples": [
+      {
+        "input": "Call strengthCheck",
+        "output": "number",
+        "description": "Basic usage of strengthCheck"
+      }
+    ],
+    "tags": [
+      "security",
+      "bcrypt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "bcrypt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "strengthCheck(password: string): number"
+    }
+  },
+  {
+    "id": "v1-bcrypt-strengthText",
+    "name": "strengthText",
+    "aliases": [
+      "strengthText",
+      "bcrypt_strengthText"
+    ],
+    "category": "security",
+    "description": "Function strengthText from bcrypt",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call strengthText",
+        "output": "string",
+        "description": "Basic usage of strengthText"
+      }
+    ],
+    "tags": [
+      "security",
+      "bcrypt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "bcrypt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "strengthText(password: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-hash",
+    "name": "hash",
+    "aliases": [
+      "hash",
+      "hash_hash"
+    ],
+    "category": "security",
+    "description": "Function hash from hash",
+    "confidence": 0.91,
+    "inputTypes": "string, string = 'sha256'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call hash",
+        "output": "string",
+        "description": "Basic usage of hash"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "hash(data: string, algorithm: string = 'sha256'): string"
+    }
+  },
+  {
+    "id": "v1-hash-md5",
+    "name": "md5",
+    "aliases": [
+      "md5",
+      "hash_md5"
+    ],
+    "category": "security",
+    "description": "Function md5 from hash",
+    "confidence": 0.91,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call md5",
+        "output": "string",
+        "description": "Basic usage of md5"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "md5(data: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-sha1",
+    "name": "sha1",
+    "aliases": [
+      "sha1",
+      "hash_sha1"
+    ],
+    "category": "security",
+    "description": "Function sha1 from hash",
+    "confidence": 0.91,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call sha1",
+        "output": "string",
+        "description": "Basic usage of sha1"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "sha1(data: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-sha256",
+    "name": "sha256",
+    "aliases": [
+      "sha256",
+      "hash_sha256"
+    ],
+    "category": "security",
+    "description": "Function sha256 from hash",
+    "confidence": 0.91,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call sha256",
+        "output": "string",
+        "description": "Basic usage of sha256"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "sha256(data: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-sha384",
+    "name": "sha384",
+    "aliases": [
+      "sha384",
+      "hash_sha384"
+    ],
+    "category": "security",
+    "description": "Function sha384 from hash",
+    "confidence": 0.91,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call sha384",
+        "output": "string",
+        "description": "Basic usage of sha384"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "sha384(data: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-sha512",
+    "name": "sha512",
+    "aliases": [
+      "sha512",
+      "hash_sha512"
+    ],
+    "category": "security",
+    "description": "Function sha512 from hash",
+    "confidence": 0.91,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call sha512",
+        "output": "string",
+        "description": "Basic usage of sha512"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "sha512(data: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-hmac",
+    "name": "hmac",
+    "aliases": [
+      "hmac",
+      "hash_hmac"
+    ],
+    "category": "security",
+    "description": "Function hmac from hash",
+    "confidence": 0.91,
+    "inputTypes": "string, string, string = 'sha256'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call hmac",
+        "output": "string",
+        "description": "Basic usage of hmac"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "hmac(data: string, secret: string, algorithm: string = 'sha256'): string"
+    }
+  },
+  {
+    "id": "v1-hash-hmacSha256",
+    "name": "hmacSha256",
+    "aliases": [
+      "hmacSha256",
+      "hash_hmacSha256"
+    ],
+    "category": "security",
+    "description": "Function hmacSha256 from hash",
+    "confidence": 0.91,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call hmacSha256",
+        "output": "string",
+        "description": "Basic usage of hmacSha256"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "hmacSha256(data: string, secret: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-hmacSha512",
+    "name": "hmacSha512",
+    "aliases": [
+      "hmacSha512",
+      "hash_hmacSha512"
+    ],
+    "category": "security",
+    "description": "Function hmacSha512 from hash",
+    "confidence": 0.91,
+    "inputTypes": "string, string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call hmacSha512",
+        "output": "string",
+        "description": "Basic usage of hmacSha512"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "hmacSha512(data: string, secret: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-fileHash",
+    "name": "fileHash",
+    "aliases": [
+      "fileHash",
+      "hash_fileHash"
+    ],
+    "category": "security",
+    "description": "Function fileHash from hash",
+    "confidence": 0.91,
+    "inputTypes": "string, string = 'sha256'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call fileHash",
+        "output": "string",
+        "description": "Basic usage of fileHash"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "fileHash(filePath: string, algorithm: string = 'sha256'): string"
+    }
+  },
+  {
+    "id": "v1-hash-fileSha256",
+    "name": "fileSha256",
+    "aliases": [
+      "fileSha256",
+      "hash_fileSha256"
+    ],
+    "category": "security",
+    "description": "Function fileSha256 from hash",
+    "confidence": 0.91,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call fileSha256",
+        "output": "string",
+        "description": "Basic usage of fileSha256"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "fileSha256(filePath: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-compare",
+    "name": "compare",
+    "aliases": [
+      "compare",
+      "hash_compare"
+    ],
+    "category": "security",
+    "description": "Function compare from hash",
+    "confidence": 0.91,
+    "inputTypes": "string, string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call compare",
+        "output": "boolean",
+        "description": "Basic usage of compare"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "compare(hash1: string, hash2: string): boolean"
+    }
+  },
+  {
+    "id": "v1-hash-blake2b",
+    "name": "blake2b",
+    "aliases": [
+      "blake2b",
+      "hash_blake2b"
+    ],
+    "category": "security",
+    "description": "Function blake2b from hash",
+    "confidence": 0.91,
+    "inputTypes": "string",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call blake2b",
+        "output": "string",
+        "description": "Basic usage of blake2b"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "blake2b(data: string): string"
+    }
+  },
+  {
+    "id": "v1-hash-verify",
+    "name": "verify",
+    "aliases": [
+      "verify",
+      "hash_verify"
+    ],
+    "category": "security",
+    "description": "Function verify from hash",
+    "confidence": 0.91,
+    "inputTypes": "string, string, string = 'sha256'",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call verify",
+        "output": "boolean",
+        "description": "Basic usage of verify"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "verify(data: string, expectedHash: string, algorithm: string = 'sha256'): boolean"
+    }
+  },
+  {
+    "id": "v1-hash-multiHash",
+    "name": "multiHash",
+    "aliases": [
+      "multiHash",
+      "hash_multiHash"
+    ],
+    "category": "security",
+    "description": "Function multiHash from hash",
+    "confidence": 0.91,
+    "inputTypes": "string, number = 2, string = 'sha256'",
+    "outputType": "string",
+    "examples": [
+      {
+        "input": "Call multiHash",
+        "output": "string",
+        "description": "Basic usage of multiHash"
+      }
+    ],
+    "tags": [
+      "security",
+      "hash",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "hash",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 3,
+      "signature": "multiHash(data: string, iterations: number = 2, algorithm: string = 'sha256'): string"
+    }
+  },
+  {
+    "id": "v1-jwt-verify",
+    "name": "verify",
+    "aliases": [
+      "verify",
+      "jwt_verify"
+    ],
+    "category": "security",
+    "description": "Function verify from jwt",
+    "confidence": 0.93,
+    "inputTypes": "string, string",
+    "outputType": "JWTVerified",
+    "examples": [
+      {
+        "input": "Call verify",
+        "output": "JWTVerified",
+        "description": "Basic usage of verify"
+      }
+    ],
+    "tags": [
+      "security",
+      "jwt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "jwt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "verify(token: string, secret: string): JWTVerified"
+    }
+  },
+  {
+    "id": "v1-jwt-isExpired",
+    "name": "isExpired",
+    "aliases": [
+      "isExpired",
+      "jwt_isExpired"
+    ],
+    "category": "security",
+    "description": "Function isExpired from jwt",
+    "confidence": 0.93,
+    "inputTypes": "string",
+    "outputType": "boolean",
+    "examples": [
+      {
+        "input": "Call isExpired",
+        "output": "boolean",
+        "description": "Basic usage of isExpired"
+      }
+    ],
+    "tags": [
+      "security",
+      "jwt",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "jwt",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "isExpired(token: string): boolean"
+    }
+  },
+  {
+    "id": "v1-logger-getLogger",
+    "name": "getLogger",
+    "aliases": [
+      "getLogger",
+      "logger_getLogger"
+    ],
+    "category": "utilities",
+    "description": "Function getLogger from logger",
+    "confidence": 0.92,
+    "inputTypes": "string",
+    "outputType": "Logger",
+    "examples": [
+      {
+        "input": "Call getLogger",
+        "output": "Logger",
+        "description": "Basic usage of getLogger"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "logger",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "logger",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "getLogger(name: string): Logger"
+    }
+  },
+  {
+    "id": "v1-test-printResults",
+    "name": "printResults",
+    "aliases": [
+      "printResults",
+      "test_printResults"
+    ],
+    "category": "utilities",
+    "description": "Function printResults from test",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call printResults",
+        "output": "void",
+        "description": "Basic usage of printResults"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "test",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "test",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "printResults(): void"
+    }
+  },
+  {
+    "id": "v1-test-getResults",
+    "name": "getResults",
+    "aliases": [
+      "getResults",
+      "test_getResults"
+    ],
+    "category": "utilities",
+    "description": "Function getResults from test",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "object",
+    "examples": [
+      {
+        "input": "Call getResults",
+        "output": "object",
+        "description": "Basic usage of getResults"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "test",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "test",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 0,
+      "signature": "getResults(): object"
+    }
+  },
+  {
+    "id": "v1-test-describe",
+    "name": "describe",
+    "aliases": [
+      "describe",
+      "test_describe"
+    ],
+    "category": "utilities",
+    "description": "Constant describe from test",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call describe",
+        "output": "any",
+        "description": "Basic usage of describe"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "test",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "test",
+      "isAsync": false,
+      "isConstant": true,
+      "paramCount": 0,
+      "signature": "const describe = globalContext.describe.bind(globalContext)..."
+    }
+  },
+  {
+    "id": "v1-test-it",
+    "name": "it",
+    "aliases": [
+      "it",
+      "test_it"
+    ],
+    "category": "utilities",
+    "description": "Constant it from test",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call it",
+        "output": "any",
+        "description": "Basic usage of it"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "test",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "test",
+      "isAsync": false,
+      "isConstant": true,
+      "paramCount": 0,
+      "signature": "const it = globalContext.it.bind(globalContext)..."
+    }
+  },
+  {
+    "id": "v1-test-beforeAll",
+    "name": "beforeAll",
+    "aliases": [
+      "beforeAll",
+      "test_beforeAll"
+    ],
+    "category": "utilities",
+    "description": "Constant beforeAll from test",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call beforeAll",
+        "output": "any",
+        "description": "Basic usage of beforeAll"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "test",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "test",
+      "isAsync": false,
+      "isConstant": true,
+      "paramCount": 0,
+      "signature": "const beforeAll = globalContext.beforeAll.bind(globalContext)..."
+    }
+  },
+  {
+    "id": "v1-test-afterAll",
+    "name": "afterAll",
+    "aliases": [
+      "afterAll",
+      "test_afterAll"
+    ],
+    "category": "utilities",
+    "description": "Constant afterAll from test",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call afterAll",
+        "output": "any",
+        "description": "Basic usage of afterAll"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "test",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "test",
+      "isAsync": false,
+      "isConstant": true,
+      "paramCount": 0,
+      "signature": "const afterAll = globalContext.afterAll.bind(globalContext)..."
+    }
+  },
+  {
+    "id": "v1-test-beforeEach",
+    "name": "beforeEach",
+    "aliases": [
+      "beforeEach",
+      "test_beforeEach"
+    ],
+    "category": "utilities",
+    "description": "Constant beforeEach from test",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call beforeEach",
+        "output": "any",
+        "description": "Basic usage of beforeEach"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "test",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "test",
+      "isAsync": false,
+      "isConstant": true,
+      "paramCount": 0,
+      "signature": "const beforeEach = globalContext.beforeEach.bind(globalContext)..."
+    }
+  },
+  {
+    "id": "v1-test-afterEach",
+    "name": "afterEach",
+    "aliases": [
+      "afterEach",
+      "test_afterEach"
+    ],
+    "category": "utilities",
+    "description": "Constant afterEach from test",
+    "confidence": 0.92,
+    "inputTypes": "void",
+    "outputType": "any",
+    "examples": [
+      {
+        "input": "Call afterEach",
+        "output": "any",
+        "description": "Basic usage of afterEach"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "test",
+      "sync"
+    ],
+    "complexity": 1,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "test",
+      "isAsync": false,
+      "isConstant": true,
+      "paramCount": 0,
+      "signature": "const afterEach = globalContext.afterEach.bind(globalContext)..."
+    }
+  },
+  {
+    "id": "v1-timer-setTimeout",
+    "name": "setTimeout",
+    "aliases": [
+      "setTimeout",
+      "timer_setTimeout"
+    ],
+    "category": "utilities",
+    "description": "Function setTimeout from timer",
+    "confidence": 0.9,
+    "inputTypes": "() => void, number",
+    "outputType": "TimerId",
+    "examples": [
+      {
+        "input": "Call setTimeout",
+        "output": "TimerId",
+        "description": "Basic usage of setTimeout"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "timer",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "timer",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "setTimeout(callback: () => void, delayMs: number): TimerId"
+    }
+  },
+  {
+    "id": "v1-timer-setInterval",
+    "name": "setInterval",
+    "aliases": [
+      "setInterval",
+      "timer_setInterval"
+    ],
+    "category": "utilities",
+    "description": "Function setInterval from timer",
+    "confidence": 0.9,
+    "inputTypes": "() => void, number",
+    "outputType": "IntervalId",
+    "examples": [
+      {
+        "input": "Call setInterval",
+        "output": "IntervalId",
+        "description": "Basic usage of setInterval"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "timer",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "timer",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 2,
+      "signature": "setInterval(callback: () => void, intervalMs: number): IntervalId"
+    }
+  },
+  {
+    "id": "v1-timer-clearTimeout",
+    "name": "clearTimeout",
+    "aliases": [
+      "clearTimeout",
+      "timer_clearTimeout"
+    ],
+    "category": "utilities",
+    "description": "Function clearTimeout from timer",
+    "confidence": 0.9,
+    "inputTypes": "TimerId",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call clearTimeout",
+        "output": "void",
+        "description": "Basic usage of clearTimeout"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "timer",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "timer",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "clearTimeout(timerId: TimerId): void"
+    }
+  },
+  {
+    "id": "v1-timer-clearInterval",
+    "name": "clearInterval",
+    "aliases": [
+      "clearInterval",
+      "timer_clearInterval"
+    ],
+    "category": "utilities",
+    "description": "Function clearInterval from timer",
+    "confidence": 0.9,
+    "inputTypes": "IntervalId",
+    "outputType": "void",
+    "examples": [
+      {
+        "input": "Call clearInterval",
+        "output": "void",
+        "description": "Basic usage of clearInterval"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "timer",
+      "sync"
+    ],
+    "complexity": 2,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "timer",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "clearInterval(intervalId: IntervalId): void"
+    }
+  },
+  {
+    "id": "v1-timer-delay",
+    "name": "delay",
+    "aliases": [
+      "delay",
+      "timer_delay"
+    ],
+    "category": "utilities",
+    "description": "Function delay from timer",
+    "confidence": 0.9,
+    "inputTypes": "number",
+    "outputType": "Promise<void>",
+    "examples": [
+      {
+        "input": "Call delay",
+        "output": "Promise<void>",
+        "description": "Basic usage of delay"
+      }
+    ],
+    "tags": [
+      "utilities",
+      "timer",
+      "sync"
+    ],
+    "complexity": 3,
+    "relatedPatterns": [],
+    "metadata": {
+      "source": "v1",
+      "package": "timer",
+      "isAsync": false,
+      "isConstant": false,
+      "paramCount": 1,
+      "signature": "delay(delayMs: number): Promise<void>"
+    }
+  }
+]

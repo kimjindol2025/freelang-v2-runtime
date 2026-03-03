@@ -1,0 +1,54 @@
+// FreeLang Standard Library: String Module
+// 문자열 처리 함수
+
+// 문자열 길이
+fn strlen(s) {
+  // 구현: s.length FFI 호출
+  0
+}
+
+// 부분 문자열
+fn substr(s, start, length) {
+  // 구현: s.substring(start, start + length)
+  s
+}
+
+// 문자열 연결
+fn strcat(a, b) {
+  a + b
+}
+
+// 문자열 반복
+fn strrepeat(s, count) {
+  let result = ""
+  let i = 0
+  while (i < count) {
+    result = result + s
+    i = i + 1
+  }
+  result
+}
+
+// 문자열 역순
+fn strreverse(s) {
+  // 구현: 필요
+  s
+}
+
+// 대문자 변환
+fn toupper(s) {
+  // 구현: FFI로 toUpperCase 호출
+  s
+}
+
+// 소문자 변환
+fn tolower(s) {
+  // 구현: FFI로 toLowerCase 호출
+  s
+}
+
+// 문자열 포함 여부
+fn contains(s, substr) {
+  // 구현: s.includes(substr)
+  false
+}

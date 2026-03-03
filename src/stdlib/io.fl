@@ -1,0 +1,38 @@
+// FreeLang Standard Library: I/O Module
+// 파일 및 콘솔 입출력
+
+// 콘솔에 출력
+fn print(value) {
+  // 구현: C FFI로 console.log 호출
+  value
+}
+
+// 콘솔에 줄바꿈과 함께 출력
+fn println(value) {
+  print(value)
+  print("\n")
+}
+
+// 파일 읽기
+fn readFile(path) {
+  // 구현: fs.readFileSync 호출
+  ""
+}
+
+// 파일 쓰기
+fn writeFile(path, content) {
+  // 구현: fs.writeFileSync 호출
+  true
+}
+
+// 파일 존재 여부
+fn fileExists(path) {
+  // 구현: fs.existsSync 호출
+  false
+}
+
+// 파일 삭제
+fn deleteFile(path) {
+  // 구현: fs.unlinkSync 호출
+  true
+}

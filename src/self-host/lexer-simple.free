@@ -1,0 +1,77 @@
+@minimal
+fn freelang_tokenize
+input: string
+output: array<string>
+intent: "프리랭 소스 코드를 토큰으로 분할 (Self-Hosting Lexer - Simplified)"
+{
+  let tokens = [];
+  let i = 0;
+  let len_input = length(input);
+
+  while i < len_input {
+    let ch = charAt(input, i);
+
+    // 공백/탭 스킵
+    if ch == ' ' or ch == '\t' or ch == '\n' or ch == '\r' {
+      i += 1;
+      continue;
+    }
+
+    // 문자열: "..."
+    if ch == '"' {
+      let start = i;
+      i += 1;
+      while i < len_input and charAt(input, i) != '"' {
+        i += 1;
+      }
+      if i < len_input {
+        i += 1; // 닫는 따옴표
+      }
+      let str_token = substr(input, start, i);
+      push(tokens, str_token);
+      continue;
+    }
+
+    // 숫자: 0-9
+    if isDigit(ch) {
+      let start = i;
+      while i < len_input and isDigit(charAt(input, i)) {
+        i += 1;
+      }
+      let num_token = substr(input, start, i);
+      push(tokens, num_token);
+      continue;
+    }
+
+    // 식별자/키워드: a-z, A-Z, _
+    if isLetter(ch) or ch == '_' {
+      let start = i;
+      while i < len_input {
+        let c = charAt(input, i);
+        if isLetter(c) or isDigit(c) or c == '_' {
+          i += 1;
+        } else {
+          break;
+        }
+      }
+      let ident_token = substr(input, start, i);
+      push(tokens, ident_token);
+      continue;
+    }
+
+    // 1글자 기호
+    if ch == '+' or ch == '-' or ch == '*' or ch == '/' or ch == '%' or
+       ch == '<' or ch == '>' or ch == '!' or ch == '&' or ch == '|' or
+       ch == '=' or ch == '.' or ch == ',' or ch == ';' or ch == ':' or
+       ch == '(' or ch == ')' or ch == '[' or ch == ']' or ch == '{' or ch == '}' {
+      push(tokens, ch);
+      i += 1;
+      continue;
+    }
+
+    // 알 수 없는 문자: 스킵
+    i += 1;
+  }
+
+  return tokens;
+}

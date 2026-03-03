@@ -1,0 +1,138 @@
+@minimal
+fn freelang_tokenize
+input: string
+output: array<string>
+intent: "프리랭 소스 코드를 토큰으로 분할 (Self-Hosting Lexer) - 단일 함수"
+{
+  let tokens = [];
+  let i = 0;
+  let len_input = length(input);
+
+  while i < len_input {
+    let ch = charAt(input, i);
+
+    // 공백/탭/줄바꿈 스킵
+    if ch == ' ' or ch == '\t' or ch == '\n' or ch == '\r' {
+      i += 1;
+      continue;
+    }
+
+    // 주석: // (줄 끝까지)
+    if ch == '/' and i + 1 < len_input and charAt(input, i + 1) == '/' {
+      while i < len_input and charAt(input, i) != '\n' {
+        i += 1;
+      }
+      continue;
+    }
+
+    // 문자열: "..."
+    if ch == '"' {
+      let start = i;
+      i += 1;
+      while i < len_input and charAt(input, i) != '"' {
+        i += 1;
+      }
+      if i < len_input {
+        i += 1; // 닫는 따옴표
+      }
+      let str_token = substr(input, start, i);
+      push(tokens, str_token);
+      continue;
+    }
+
+    // 문자: '...'
+    if ch == '\'' {
+      let start = i;
+      i += 1;
+      while i < len_input and charAt(input, i) != '\'' {
+        i += 1;
+      }
+      if i < len_input {
+        i += 1; // 닫는 따옴표
+      }
+      let char_token = substr(input, start, i);
+      push(tokens, char_token);
+      continue;
+    }
+
+    // 숫자: 0-9 (소수점 포함)
+    let is_digit = ch >= '0' and ch <= '9';
+    if is_digit {
+      let start = i;
+      while i < len_input {
+        let c = charAt(input, i);
+        let c_is_digit = c >= '0' and c <= '9';
+        if c_is_digit {
+          i += 1;
+        } else {
+          break;
+        }
+      }
+      // 소수점 처리
+      if i < len_input and charAt(input, i) == '.' {
+        i += 1;
+        while i < len_input {
+          let c = charAt(input, i);
+          let c_is_digit = c >= '0' and c <= '9';
+          if c_is_digit {
+            i += 1;
+          } else {
+            break;
+          }
+        }
+      }
+      let num_token = substr(input, start, i);
+      push(tokens, num_token);
+      continue;
+    }
+
+    // 식별자/키워드: a-z, A-Z, _
+    let is_letter = (ch >= 'a' and ch <= 'z') or (ch >= 'A' and ch <= 'Z');
+    if is_letter or ch == '_' {
+      let start = i;
+      while i < len_input {
+        let c = charAt(input, i);
+        let c_is_letter = (c >= 'a' and c <= 'z') or (c >= 'A' and c <= 'Z');
+        let c_is_digit = c >= '0' and c <= '9';
+        if c_is_letter or c_is_digit or c == '_' {
+          i += 1;
+        } else {
+          break;
+        }
+      }
+      let ident_token = substr(input, start, i);
+      push(tokens, ident_token);
+      continue;
+    }
+
+    // 2글자 연산자
+    if i + 1 < len_input {
+      let two_char = ch + charAt(input, i + 1);
+
+      if two_char == '==' or two_char == '!=' or two_char == '<=' or two_char == '>=' or
+         two_char == '&&' or two_char == '||' or two_char == '+=' or two_char == '-=' or
+         two_char == '*=' or two_char == '/=' or two_char == '%=' or two_char == '->' or
+         two_char == '=>' or two_char == '::' or two_char == '..' or two_char == '|>' {
+        push(tokens, two_char);
+        i += 2;
+        continue;
+      }
+    }
+
+    // 1글자 기호
+    if ch == '+' or ch == '-' or ch == '*' or ch == '/' or ch == '%' or
+       ch == '<' or ch == '>' or ch == '!' or ch == '&' or ch == '|' or ch == '^' or
+       ch == '~' or ch == '=' or ch == '.' or ch == ',' or ch == ';' or ch == ':' or
+       ch == '?' or ch == '@' or ch == '#' or ch == '(' or ch == ')' or ch == '[' or
+       ch == ']' or ch == '{' or ch == '}' {
+      push(tokens, ch);
+      i += 1;
+      continue;
+    }
+
+    // 알 수 없는 문자: 스킵
+    i += 1;
+  }
+
+  return tokens;
+}

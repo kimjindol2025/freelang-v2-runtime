@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-02-17T10:30:56.247Z",
+  "v210Count": 0,
+  "v1Count": 578,
+  "mergedCount": 0,
+  "totalUnique": 578,
+  "confidenceStats": {
+    "average": 89.5,
+    "high": 543,
+    "medium": 35,
+    "low": 0
+  },
+  "deduplication": {
+    "eliminated": 0,
+    "percentage": "0.0"
+  }
+}

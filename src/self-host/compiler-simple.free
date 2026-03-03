@@ -1,0 +1,106 @@
+@minimal
+fn freelang_compile
+input: array<string>
+output: number
+intent: "IR instruction을 해석하여 실행 - 단일 함수 버전"
+{
+  // ── 스택 기반 VM 구현 ────────────────────
+  let stack = [];
+  let pos = 0;
+  let len_input = length(input);
+  let result = 0;
+
+  // ── Instruction 순회 및 실행 ─────────────
+
+  while pos < len_input {
+    let instruction = charAt(input, pos);
+
+    // PUSH: 숫자를 스택에 푸시
+    if instruction == "PUSH" {
+      pos += 1;
+      if pos < len_input {
+        let value_str = charAt(input, pos);
+        // 문자열을 숫자로 변환 (간단한 방식)
+        let value = 0;
+        if value_str == "0" { value = 0; }
+        else if value_str == "1" { value = 1; }
+        else if value_str == "2" { value = 2; }
+        else if value_str == "3" { value = 3; }
+        else if value_str == "4" { value = 4; }
+        else if value_str == "5" { value = 5; }
+        else if value_str == "6" { value = 6; }
+        else if value_str == "7" { value = 7; }
+        else if value_str == "8" { value = 8; }
+        else if value_str == "9" { value = 9; }
+
+        push(stack, value);
+      }
+      pos += 1;
+      continue;
+    }
+
+    // ADD: 스택의 상단 두 값 더하기
+    if instruction == "ADD" {
+      if length(stack) >= 2 {
+        let b = charAt(stack, length(stack) - 1);
+        let a = charAt(stack, length(stack) - 2);
+        // 배열에서 마지막 두 개 제거 (간단화)
+        let sum = a + b;
+        // 새 값 푸시
+        push(stack, sum);
+      }
+      pos += 1;
+      continue;
+    }
+
+    // SUB: 스택의 상단 두 값 빼기
+    if instruction == "SUB" {
+      if length(stack) >= 2 {
+        let b = charAt(stack, length(stack) - 1);
+        let a = charAt(stack, length(stack) - 2);
+        let diff = a - b;
+        push(stack, diff);
+      }
+      pos += 1;
+      continue;
+    }
+
+    // MUL: 스택의 상단 두 값 곱하기
+    if instruction == "MUL" {
+      if length(stack) >= 2 {
+        let b = charAt(stack, length(stack) - 1);
+        let a = charAt(stack, length(stack) - 2);
+        let prod = a * b;
+        push(stack, prod);
+      }
+      pos += 1;
+      continue;
+    }
+
+    // DIV: 스택의 상단 두 값 나누기
+    if instruction == "DIV" {
+      if length(stack) >= 2 {
+        let b = charAt(stack, length(stack) - 1);
+        let a = charAt(stack, length(stack) - 2);
+        if b != 0 {
+          let quot = a / b;
+          push(stack, quot);
+        }
+      }
+      pos += 1;
+      continue;
+    }
+
+    // RET: 반환 (스택의 최상단 값이 결과)
+    if instruction == "RET" {
+      if length(stack) > 0 {
+        result = charAt(stack, length(stack) - 1);
+      }
+      break;
+    }
+
+    pos += 1;
+  }
+
+  return result;
+}

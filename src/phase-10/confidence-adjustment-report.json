@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-02-17T10:35:19.301Z",
+  "totalPatterns": 578,
+  "statistics": {
+    "beforeAverage": 0.8953114186851227,
+    "afterAverage": 0.9667243367935456,
+    "improvement": 0.07141291810842298,
+    "improved": 556,
+    "degraded": 22,
+    "unchanged": 0
+  },
+  "confidenceBreakdown": {
+    "before": {
+      "high": 543,
+      "medium": 35,
+      "low": 0
+    },
+    "after": {
+      "high": 565,
+      "medium": 13,
+      "low": 0
+    }
+  },
+  "byCategory": [
+    {
+      "category": "advanced",
+      "count": 58,
+      "averageConfidence": 0.9451724137931039
+    },
+    {
+      "category": "collections",
+      "count": 58,
+      "averageConfidence": 0.9553256704980851
+    },
+    {
+      "category": "network",
+      "count": 84,
+      "averageConfidence": 0.9655423280423276
+    },
+    {
+      "category": "core",
+      "count": 124,
+      "averageConfidence": 0.9774551971326144
+    },
+    {
+      "category": "infrastructure",
+      "count": 96,
+      "averageConfidence": 0.9628703703703697
+    },
+    {
+      "category": "utilities",
+      "count": 117,
+      "averageConfidence": 0.9782146248812902
+    },
+    {
+      "category": "security",
+      "count": 41,
+      "averageConfidence": 0.9595392953929539
+    }
+  ]
+}

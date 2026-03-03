@@ -1,0 +1,38 @@
+// FreeLang Standard Library: JSON Module
+// JSON 파싱 및 직렬화
+
+// JSON 문자열 파싱
+fn jsonparse(jsonstr) {
+  // 구현: JSON.parse(jsonstr)
+  null
+}
+
+// 객체를 JSON 문자열로 변환
+fn jsonstringify(obj) {
+  // 구현: JSON.stringify(obj)
+  "{}"
+}
+
+// 아름답게 포맷팅된 JSON 생성
+fn jsonformat(obj, indent) {
+  // 구현: JSON.stringify(obj, null, indent)
+  "{}"
+}
+
+// JSON 유효성 검사
+fn jsonvalidate(jsonstr) {
+  // 구현: try JSON.parse, catch는 false
+  false
+}
+
+// 객체에서 특정 필드 추출
+fn jsonget(obj, path) {
+  // 경로: "a.b.c" 같은 형식
+  null
+}
+
+// 객체 필드 설정
+fn jsonset(obj, path, value) {
+  // 구현: 필드 설정 후 객체 반환
+  obj
+}

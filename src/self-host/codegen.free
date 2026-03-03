@@ -1,0 +1,138 @@
+@minimal
+fn freelang_codegen
+input: array<string>
+output: string
+intent: "본체 토큰 배열을 IR instruction으로 변환 - 모듈식 버전"
+{
+  // Phase 3: CodeGen
+  // 입력: Parser.free의 body 토큰 배열
+  // 출력: IR instruction 배열 (JSON 형식)
+
+  let ir_instructions = [];
+  let pos = 0;
+  let len_input = length(input);
+
+  // ── IR 생성 헬퍼 함수 ───────────────────
+
+  fn emit_instruction {
+    let opcode = charAt(input, 0);
+    let arg = charAt(input, 1);
+    let instruction = "{\"op\":\"";
+    instruction = instruction + opcode;
+    instruction = instruction + "\"";
+    if arg != "" {
+      instruction = instruction + ",\"arg\":\"";
+      instruction = instruction + arg;
+      instruction = instruction + "\"";
+    }
+    instruction = instruction + "}";
+    push(ir_instructions, instruction);
+    return true;
+  }
+
+  // ── 토큰 분류 및 IR 매핑 ────────────────
+
+  fn classify_and_emit {
+    let token = charAt(input, 0);
+
+    // 숫자 토큰 → PUSH
+    if token >= "0" and token <= "9" {
+      let ir = "{\"op\":\"PUSH\",\"arg\":";
+      ir = ir + token;
+      ir = ir + "}";
+      push(ir_instructions, ir);
+      return true;
+    }
+
+    // 연산자 토큰 → 산술 IR
+    if token == "+" {
+      push(ir_instructions, "{\"op\":\"ADD\"}");
+      return true;
+    }
+    if token == "-" {
+      push(ir_instructions, "{\"op\":\"SUB\"}");
+      return true;
+    }
+    if token == "*" {
+      push(ir_instructions, "{\"op\":\"MUL\"}");
+      return true;
+    }
+    if token == "/" {
+      push(ir_instructions, "{\"op\":\"DIV\"}");
+      return true;
+    }
+
+    // return → RET
+    if token == "return" {
+      push(ir_instructions, "{\"op\":\"RET\"}");
+      return true;
+    }
+
+    // 식별자 (변수) → LOAD
+    let is_var = (token >= "a" and token <= "z") or (token >= "A" and token <= "Z");
+    if is_var {
+      let ir_load = "{\"op\":\"LOAD\",\"arg\":\"";
+      ir_load = ir_load + token;
+      ir_load = ir_load + "\"}";
+      push(ir_instructions, ir_load);
+      return true;
+    }
+
+    return false;
+  }
+
+  // ── 메인 파싱 루프 ──────────────────────
+
+  while pos < len_input {
+    let token = charAt(input, pos);
+
+    // let 문: STORE
+    if token == "let" {
+      pos += 1;
+      if pos < len_input {
+        let var_name = charAt(input, pos);
+        pos += 1;
+        // = 다음의 값들을 처리
+        while pos < len_input and charAt(input, pos) != ";" {
+          let t = charAt(input, pos);
+          let is_digit = t >= "0" and t <= "9";
+          let is_op = t == "+" or t == "-" or t == "*" or t == "/";
+          let is_var = (t >= "a" and t <= "z") or (t >= "A" and t <= "Z");
+
+          if is_digit or is_op or is_var {
+            classify_and_emit;
+          }
+
+          pos += 1;
+        }
+
+        // STORE 생성
+        let ir_store = "{\"op\":\"STORE\",\"arg\":\"";
+        ir_store = ir_store + var_name;
+        ir_store = ir_store + "\"}";
+        push(ir_instructions, ir_store);
+      }
+      pos += 1;
+      continue;
+    }
+
+    // 일반 토큰 분류
+    classify_and_emit;
+    pos += 1;
+  }
+
+  // ── 결과 반환 (JSON 배열) ──────────────
+
+  let result = "[";
+  let i = 0;
+  while i < length(ir_instructions) {
+    if i > 0 {
+      result = result + ",";
+    }
+    result = result + charAt(ir_instructions, i);
+    i += 1;
+  }
+  result = result + "]";
+
+  return result;
+}

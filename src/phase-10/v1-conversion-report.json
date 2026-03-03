@@ -1,0 +1,194 @@
+{
+  "timestamp": "2026-02-17T10:29:55.137Z",
+  "sourceAPIs": 596,
+  "generatedPatterns": 596,
+  "packageCount": 36,
+  "confidenceBreakdown": {
+    "high": 558,
+    "medium": 38,
+    "low": 0,
+    "average": 89.4
+  },
+  "byPackage": [
+    {
+      "package": "cache",
+      "count": 8,
+      "avgConfidence": "91.1"
+    },
+    {
+      "package": "compress",
+      "count": 6,
+      "avgConfidence": "91.0"
+    },
+    {
+      "package": "config",
+      "count": 8,
+      "avgConfidence": "90.7"
+    },
+    {
+      "package": "email",
+      "count": 8,
+      "avgConfidence": "91.3"
+    },
+    {
+      "package": "event",
+      "count": 9,
+      "avgConfidence": "89.9"
+    },
+    {
+      "package": "plugin",
+      "count": 11,
+      "avgConfidence": "89.5"
+    },
+    {
+      "package": "validate",
+      "count": 3,
+      "avgConfidence": "90.7"
+    },
+    {
+      "package": "worker",
+      "count": 5,
+      "avgConfidence": "93.0"
+    },
+    {
+      "package": "datetime",
+      "count": 17,
+      "avgConfidence": "86.9"
+    },
+    {
+      "package": "regexp",
+      "count": 20,
+      "avgConfidence": "86.5"
+    },
+    {
+      "package": "string",
+      "count": 26,
+      "avgConfidence": "86.4"
+    },
+    {
+      "package": "env",
+      "count": 19,
+      "avgConfidence": "86.8"
+    },
+    {
+      "package": "fs",
+      "count": 16,
+      "avgConfidence": "86.4"
+    },
+    {
+      "package": "io",
+      "count": 11,
+      "avgConfidence": "88.4"
+    },
+    {
+      "package": "json",
+      "count": 14,
+      "avgConfidence": "86.6"
+    },
+    {
+      "package": "math",
+      "count": 44,
+      "avgConfidence": "87.6"
+    },
+    {
+      "package": "os",
+      "count": 17,
+      "avgConfidence": "89.5"
+    },
+    {
+      "package": "path",
+      "count": 11,
+      "avgConfidence": "88.0"
+    },
+    {
+      "package": "orm",
+      "count": 3,
+      "avgConfidence": "91.0"
+    },
+    {
+      "package": "prometheus",
+      "count": 45,
+      "avgConfidence": "90.7"
+    },
+    {
+      "package": "sql",
+      "count": 29,
+      "avgConfidence": "91.3"
+    },
+    {
+      "package": "swagger",
+      "count": 20,
+      "avgConfidence": "89.8"
+    },
+    {
+      "package": "grpc",
+      "count": 6,
+      "avgConfidence": "91.5"
+    },
+    {
+      "package": "http",
+      "count": 29,
+      "avgConfidence": "89.7"
+    },
+    {
+      "package": "tcp",
+      "count": 14,
+      "avgConfidence": "91.9"
+    },
+    {
+      "package": "url",
+      "count": 18,
+      "avgConfidence": "89.2"
+    },
+    {
+      "package": "ws",
+      "count": 18,
+      "avgConfidence": "91.6"
+    },
+    {
+      "package": "aes",
+      "count": 8,
+      "avgConfidence": "85.0"
+    },
+    {
+      "package": "bcrypt",
+      "count": 8,
+      "avgConfidence": "87.0"
+    },
+    {
+      "package": "hash",
+      "count": 18,
+      "avgConfidence": "87.4"
+    },
+    {
+      "package": "jwt",
+      "count": 10,
+      "avgConfidence": "88.0"
+    },
+    {
+      "package": "atomic",
+      "count": 26,
+      "avgConfidence": "92.2"
+    },
+    {
+      "package": "logger",
+      "count": 20,
+      "avgConfidence": "89.3"
+    },
+    {
+      "package": "mutex",
+      "count": 19,
+      "avgConfidence": "93.0"
+    },
+    {
+      "package": "test",
+      "count": 22,
+      "avgConfidence": "92.1"
+    },
+    {
+      "package": "timer",
+      "count": 30,
+      "avgConfidence": "91.2"
+    }
+  ]
+}

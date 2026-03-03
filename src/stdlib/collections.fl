@@ -1,0 +1,61 @@
+// FreeLang Standard Library: Collections Module
+// 배열, 리스트, 맵, 셋
+
+// 배열 길이
+fn arraylen(arr) {
+  // 구현: arr.length FFI
+  0
+}
+
+// 배열 요소 추가
+fn arraypush(arr, value) {
+  // 구현: arr.push(value)
+  arr
+}
+
+// 배열 요소 제거
+fn arraypop(arr) {
+  // 구현: arr.pop()
+  arr
+}
+
+// 배열 첫 요소
+fn arrayhead(arr) {
+  // 구현: arr[0]
+  null
+}
+
+// 배열 나머지
+fn arraytail(arr) {
+  // 구현: arr.slice(1)
+  arr
+}
+
+// 배열 매핑
+fn arraymap(arr, fn) {
+  // 간단 구현: FFI 필요
+  arr
+}
+
+// 배열 필터링
+fn arrayfilter(arr, fn) {
+  // 간단 구현: FFI 필요
+  arr
+}
+
+// 배열 원소 합계
+fn arraysum(arr) {
+  let result = 0
+  let i = 0
+  while (i < arraylen(arr)) {
+    // result = result + arr[i]  // 인덱싱 필요
+    i = i + 1
+  }
+  result
+}
+
+// 배열 정렬
+fn arraysort(arr) {
+  // 구현: arr.sort()
+  arr
+}

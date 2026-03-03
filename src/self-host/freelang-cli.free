@@ -1,0 +1,223 @@
+@minimal
+fn freelang_cli
+input: array<string>
+output: number
+intent: "FreeLang CLI tool - run, compile, repl"
+{
+  // Wave 4: Production Deployment
+  // CLI 도구: run, compile, repl 명령어
+  // 입력: 명령줄 인자 배열
+  // 출력: 실행 결과 코드
+
+  let argc = length(input);
+  let result = 0;
+
+  // ── 헬퍼: 명령어 파싱 ──────────────────
+
+  fn parse_command {
+    if argc == 0 {
+      return -1;  // 명령어 없음
+    }
+    let cmd = charAt(input, 0);
+    return cmd;
+  }
+
+  // ── 헬퍼: 파일 읽기 (시뮬레이션) ────────
+
+  fn read_file {
+    let filename = charAt(input, 0);
+    // 실제 구현에서는 파일 I/O 수행
+    // 여기서는 시뮬레이션
+    return true;
+  }
+
+  // ── 헬퍼: 파일 쓰기 (시뮬레이션) ────────
+
+  fn write_file {
+    let filename = charAt(input, 0);
+    let content = charAt(input, 1);
+    // 실제 구현에서는 파일 I/O 수행
+    return true;
+  }
+
+  // ── 헬퍼: 에러 처리 ──────────────────
+
+  fn print_error {
+    let msg = charAt(input, 0);
+    // 에러 메시지 출력
+    return -1;
+  }
+
+  // ── 메인 CLI 루프 ──────────────────
+
+  if argc == 0 {
+    // 도움말 출력
+    return 1;  // 도움말 코드
+  }
+
+  let command = charAt(input, 0);
+
+  // freelang run <file>
+  if command == "run" {
+    if argc < 2 {
+      return -1;  // 파일명 필수
+    }
+
+    let filename = charAt(input, 1);
+
+    // 파일 읽기
+    if read_file {
+      // 파일 내용 파싱 및 실행
+      // Lexer → Parser → CodeGen → Compiler 파이프라인
+      result = 0;  // 실행 결과
+    } else {
+      return -2;  // 파일 읽기 실패
+    }
+
+    return result;
+  }
+
+  // freelang compile <file> -o <output>
+  if command == "compile" {
+    if argc < 2 {
+      return -1;  // 파일명 필수
+    }
+
+    let filename = charAt(input, 1);
+    let output_file = "a.out";
+
+    // -o 옵션 확인
+    let i = 2;
+    while i < argc {
+      let arg = charAt(input, i);
+      if arg == "-o" {
+        if i + 1 < argc {
+          output_file = charAt(input, i + 1);
+        }
+      }
+      i += 1;
+    }
+
+    // 파일 읽기
+    if read_file {
+      // 파일 컴파일: Lexer → Parser → CodeGen → C 코드 생성
+      // C 코드를 output_file에 저장
+      if write_file {
+        return 0;  // 성공
+      } else {
+        return -3;  // 파일 쓰기 실패
+      }
+    } else {
+      return -2;  // 파일 읽기 실패
+    }
+  }
+
+  // freelang repl
+  if command == "repl" {
+    // 대화형 셸 시작
+    // 각 줄을 읽고 실행
+    let line = "";
+    let input_count = 0;
+
+    // REPL 루프 시뮬레이션
+    while input_count < 10 {
+      // 프롬프트: ">>> "
+      // 사용자 입력 읽기
+      // 입력 파싱 및 실행
+      // 결과 출력
+
+      input_count += 1;
+    }
+
+    return 0;
+  }
+
+  // freelang --version
+  if command == "--version" {
+    // 버전 정보 출력: "FreeLang v2.0.0"
+    return 2;  // 버전 코드
+  }
+
+  // freelang --help
+  if command == "--help" or command == "-h" {
+    // 도움말 출력
+    return 1;  // 도움말 코드
+  }
+
+  // 알 수 없는 명령어
+  return -1;  // 에러 코드
+}
+
+// ── 헬퍼: 메인 함수 ────────────────
+
+fn main
+input: array<string>
+output: number
+intent: "Main entry point for FreeLang CLI"
+{
+  // argc/argv 처리
+  let result = freelang_cli;
+  return result;
+}
+
+// ── 헬퍼: 명령어 설명 ──────────────
+
+fn print_help
+input: number
+output: number
+intent: "Print help message"
+{
+  // FreeLang CLI Help:
+  // Usage: freelang <command> [options]
+  //
+  // Commands:
+  //   run <file>              Run FreeLang program
+  //   compile <file> -o <out> Compile to C
+  //   repl                    Interactive shell
+  //   --help                  Show this help
+  //   --version               Show version
+
+  return 0;
+}
+
+// ── 헬퍼: 실행 결과 처리 ──────────
+
+fn handle_result
+input: number
+output: number
+intent: "Handle execution result"
+{
+  let code = input;
+
+  // 0: 성공
+  if code == 0 {
+    return 0;
+  }
+
+  // 1: 도움말
+  if code == 1 {
+    return 0;
+  }
+
+  // 2: 버전
+  if code == 2 {
+    return 0;
+  }
+
+  // -1: 알 수 없는 명령어
+  if code == -1 {
+    return 1;  // 에러
+  }
+
+  // -2: 파일 읽기 실패
+  if code == -2 {
+    return 2;  // 에러
+  }
+
+  // -3: 파일 쓰기 실패
+  if code == -3 {
+    return 3;  // 에러
+  }
+
+  return 1;
+}
