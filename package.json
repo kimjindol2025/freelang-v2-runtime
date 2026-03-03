@@ -1,0 +1,85 @@
+{
+  "name": "@freelang/v2-runtime",
+  "version": "1.1.0",
+  "description": "FreeLang v2 Runtime - 순수 FreeLang으로 구현된 자체 인터프리터 (부트스트랩)",
+  "keywords": [
+    "freelang",
+    "runtime",
+    "interpreter",
+    "bootstrap",
+    "lexer",
+    "parser",
+    "evaluator",
+    "ast",
+    "serial-communication"
+  ],
+  "author": "Kim Nexus",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gogs.dclub.kr/kim/freelang-v2-runtime.git"
+  },
+  "main": "runtime.fl",
+  "files": [
+    "lexer.fl",
+    "parser.fl",
+    "evaluator.fl",
+    "runtime.fl",
+    "README.md"
+  ],
+  "freelang": {
+    "version": "2.1.0",
+    "modules": [
+      {
+        "name": "lexer",
+        "file": "lexer.fl",
+        "description": "Lexical Analysis - 소스 코드를 토큰으로 변환"
+      },
+      {
+        "name": "parser",
+        "file": "parser.fl",
+        "description": "Syntactic Analysis - 토큰을 AST로 변환"
+      },
+      {
+        "name": "evaluator",
+        "file": "evaluator.fl",
+        "description": "Execution Engine - AST를 실행하고 Serial 통신 지원"
+      },
+      {
+        "name": "runtime",
+        "file": "runtime.fl",
+        "description": "Integrated Runtime - 3단계 통합 (Lexer → Parser → Evaluator)"
+      }
+    ]
+  },
+  "categories": [
+    "language-runtime",
+    "interpreter",
+    "bootstrap",
+    "io"
+  ],
+  "tags": [
+    "freelang-runtime",
+    "pure-implementation",
+    "lexer",
+    "parser",
+    "ast",
+    "evaluator",
+    "serial-communication",
+    "microcontroller",
+    "iot"
+  ],
+  "stats": {
+    "total_lines": 1234,
+    "lexer_lines": 350,
+    "parser_lines": 450,
+    "evaluator_lines": 314,
+    "runtime_lines": 120,
+    "features": 25
+  },
+  "engines": {
+    "freelang": "^2.1.0"
+  },
+  "status": "stable",
+  "phase": "1.1"
+}
