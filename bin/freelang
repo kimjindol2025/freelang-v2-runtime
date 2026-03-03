@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+/**
+ * FreeLang v2 - Command Line Interface
+ *
+ * Usage:
+ *   freelang run <file.fl>    - Run a FreeLang script
+ *   freelang repl             - Start interactive REPL
+ *   freelang --version        - Show version
+ *   freelang --help           - Show help
+ *
+ * Examples:
+ *   freelang run hello.fl
+ *   freelang run script.fl arg1 arg2
+ *   freelang
+ */
+
+const path = require('path');
+const fs = require('fs');
+
+// Get the path to the compiled CLI
+const cliPath = path.join(__dirname, '..', 'dist', 'cli', 'index.js');
+
+// Check if dist folder exists
+if (!fs.existsSync(cliPath)) {
+  console.error('❌ FreeLang runtime not properly installed.');
+  console.error('Please run: npm install @freelang/runtime');
+  process.exit(1);
+}
+
+// Load and execute the CLI
+try {
+  require(cliPath);
+} catch (error) {
+  console.error('❌ Error running FreeLang:', error.message);
+  process.exit(1);
+}

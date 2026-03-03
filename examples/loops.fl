@@ -1,0 +1,47 @@
+// While Loops and Control Flow - FreeLang v2
+// Demonstrates while, break, continue
+// Run with: freelang run loops.fl
+
+fn sum_range(from: i32, to: i32) -> i32 {
+  var result: i32 = 0
+  var i: i32 = from
+
+  while i <= to {
+    result = result + i
+    i = i + 1
+  }
+
+  return result
+}
+
+fn main(): void {
+  println("=== While Loop Examples ===")
+
+  println("\n1. Sum from 1 to 10:")
+  var sum: i32 = sum_range(1, 10)
+  println("Result: " + str(sum))
+
+  println("\n2. Count with break:")
+  var count: i32 = 0
+  while count < 20 {
+    if count == 5 {
+      println("Reached 5, breaking...")
+      break
+    }
+    count = count + 1
+  }
+  println("Final count: " + str(count))
+
+  println("\n3. Loop with continue:")
+  var sum2: i32 = 0
+  var j: i32 = 0
+  while j < 10 {
+    j = j + 1
+    if j == 5 {
+      println("Skipping 5...")
+      continue
+    }
+    sum2 = sum2 + j
+  }
+  println("Sum (skipping 5): " + str(sum2))
+}

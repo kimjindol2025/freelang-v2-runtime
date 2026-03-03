@@ -1,0 +1,7 @@
+// Hello World - FreeLang v2
+// Run with: freelang run hello.fl
+
+fn main(): void {
+  println("Hello, FreeLang!")
+  println("Welcome to v2.2.0")
+}

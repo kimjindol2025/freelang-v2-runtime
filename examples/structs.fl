@@ -1,0 +1,57 @@
+// Structs and Data Structures - FreeLang v2
+// Demonstrates struct definitions and field operations
+// Run with: freelang run structs.fl
+
+struct Person {
+  name: string
+  age: i32
+}
+
+struct Product {
+  name: string
+  price: f64
+  stock: i32
+}
+
+fn main(): void {
+  println("=== Struct Examples ===")
+
+  println("\n1. Person Struct:")
+  var person: Person = { name: "Alice", age: 30 }
+  println("Name: " + person.name)
+  println("Age: " + str(person.age))
+
+  println("\n2. Field Mutation (v2.2.0 feature):")
+  person.age = 31
+  println("Birthday! New age: " + str(person.age))
+
+  println("\n3. Product Inventory:")
+  var products: [Product] = [
+    { name: "Laptop", price: 999.99, stock: 5 },
+    { name: "Mouse", price: 29.99, stock: 50 },
+    { name: "Monitor", price: 299.99, stock: 12 }
+  ]
+
+  var total_value: f64 = 0.0
+  var i: i32 = 0
+  while i < length(products) {
+    var p: Product = products[i]
+    println(p.name + ": $" + str(p.price))
+    i = i + 1
+  }
+
+  println("\n4. Creating Multiple People:")
+  var alice: Person = { name: "Alice", age: 30 }
+  var bob: Person = { name: "Bob", age: 25 }
+  var charlie: Person = { name: "Charlie", age: 35 }
+
+  var people: [Person] = [alice, bob, charlie]
+
+  println("People:")
+  var j: i32 = 0
+  while j < length(people) {
+    var p: Person = people[j]
+    println("  - " + p.name + " (" + str(p.age) + " years old)")
+    j = j + 1
+  }
+}

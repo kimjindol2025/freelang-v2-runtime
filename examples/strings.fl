@@ -1,0 +1,54 @@
+// String Operations - FreeLang v2
+// Demonstrates string manipulation functions
+// Run with: freelang run strings.fl
+
+fn count_vowels(s: string) -> i32 {
+  var count: i32 = 0
+  var i: i32 = 0
+  var lower: string = to_lower(s)
+
+  while i < length(lower) {
+    let ch: string = char_at(lower, i)
+    if ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u" {
+      count = count + 1
+    }
+    i = i + 1
+  }
+
+  return count
+}
+
+fn main(): void {
+  println("=== String Operations ===")
+
+  var text: string = "Hello FreeLang"
+  println("\nOriginal: " + text)
+  println("Length: " + str(length(text)))
+  println("Uppercase: " + to_upper(text))
+  println("Lowercase: " + to_lower(text))
+
+  println("\n=== String Checks ===")
+  if starts_with(text, "Hello") {
+    println("✓ Starts with 'Hello'")
+  }
+
+  if ends_with(text, "Lang") {
+    println("✓ Ends with 'Lang'")
+  }
+
+  if contains(text, "Free") {
+    println("✓ Contains 'Free'")
+  }
+
+  println("\n=== Vowel Counter ===")
+  var text2: string = "Programming in FreeLang"
+  var vowels: i32 = count_vowels(text2)
+  println("Text: " + text2)
+  println("Vowels: " + str(vowels))
+
+  println("\n=== String Replacement ===")
+  var original: string = "Hello World"
+  var replaced: string = replace(original, "World", "FreeLang")
+  println("Original: " + original)
+  println("Replaced: " + replaced)
+}
