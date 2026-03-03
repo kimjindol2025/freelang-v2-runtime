@@ -83,6 +83,12 @@ AST → Execution Results
 
 ### 내장 함수
 - ✅ print() - 출력
+- ✅ serial_open(port, baudrate) - 직렬 포트 열기
+- ✅ serial_write(port, data) - 데이터 전송
+- ✅ serial_read(port) - 데이터 수신
+- ✅ serial_available(port) - 수신 데이터 크기
+- ✅ serial_close(port) - 포트 닫기
+- ✅ serial_is_open(port) - 포트 연결 상태 확인
 
 ---
 
@@ -92,9 +98,9 @@ AST → Execution Results
 |------|-------|------|
 | lexer.fl | 350 | 토큰화 |
 | parser.fl | 450 | AST 생성 |
-| evaluator.fl | 250 | 실행 |
+| evaluator.fl | 314 | 실행 + Serial 통신 |
 | runtime.fl | 120 | 통합 |
-| **Total** | **1,170** | **완전한 인터프리터** |
+| **Total** | **1,234** | **완전한 인터프리터 + Serial 통신** |
 
 ---
 
@@ -206,13 +212,44 @@ for each statement:
 
 ---
 
+## 📡 Serial 통신 예제
+
+```freelang
+fn main(): void {
+  // Arduino 또는 마이크로컨트롤러와 통신
+  let port = "/dev/ttyUSB0"
+  let baudrate = 9600
+
+  // 포트 열기
+  if serial_open(port, baudrate) {
+    print("포트 열림")
+
+    // 데이터 전송
+    serial_write(port, "Hello Arduino!")
+
+    // 데이터 수신
+    let response = serial_read(port)
+    print("응답: " + response)
+
+    // 포트 상태 확인
+    if serial_is_open(port) {
+      print("포트 연결 중")
+    }
+
+    // 포트 닫기
+    serial_close(port)
+  }
+}
+```
+
 ## 📈 로드맵
 
 | 버전 | 기능 | 상태 |
 |------|------|------|
 | **1.0.0** | 기본 (정수, 함수, if/while) | ✅ |
-| **1.1.0** | 배열, map | 🔄 |
-| **1.2.0** | 구조체, enum | 📅 |
+| **1.1.0** | Serial 통신 모듈 | ✅ |
+| **1.2.0** | 배열, map | 🔄 |
+| **1.3.0** | 구조체, enum | 📅 |
 | **2.0.0** | 모듈 시스템 | 📅 |
 
 ---

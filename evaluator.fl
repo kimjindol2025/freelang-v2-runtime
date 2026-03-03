@@ -1,15 +1,87 @@
 // FreeLang v2 Evaluator (자기 언어로 구현)
 // AST → 실행
 
+// ═══════════════════════════════════════════════════════
+// Serial 통신 모듈
+// ═══════════════════════════════════════════════════════
+
+class Serial {
+  port: Str
+  baudrate: Int
+  is_open: Bool
+  buffer: Str
+  data_written: Str
+
+  fn new(port: Str, baudrate: Int): Serial {
+    this.port = port
+    this.baudrate = baudrate
+    this.is_open = false
+    this.buffer = ""
+    this.data_written = ""
+    return this
+  }
+
+  fn open(): Bool {
+    if this.is_open {
+      return false
+    }
+    this.is_open = true
+    this.buffer = ""
+    this.data_written = ""
+    return true
+  }
+
+  fn close(): void {
+    this.is_open = false
+  }
+
+  fn write(data: Str): Bool {
+    if !this.is_open {
+      return false
+    }
+    this.data_written = this.data_written + data
+    return true
+  }
+
+  fn read(): Str {
+    if !this.is_open {
+      return ""
+    }
+    let result = this.buffer
+    this.buffer = ""
+    return result
+  }
+
+  fn available(): Int {
+    return this.buffer.length
+  }
+
+  fn is_connected(): Bool {
+    return this.is_open
+  }
+
+  fn receive(data: Str): void {
+    if this.is_open {
+      this.buffer = this.buffer + data
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// Runtime 클래스
+// ═══════════════════════════════════════════════════════
+
 class Runtime {
   globals: any        // Map<Str, Value>
   functions: any      // Map<Str, FunctionDef>
   call_stack: any     // Map<Str, any> (로컬 변수)
+  serials: any        // Map<Str, Serial> (직렬 포트)
 
   fn new(): Runtime {
     this.globals = {}
     this.functions = {}
     this.call_stack = {}
+    this.serials = {}
     return this
   }
 
@@ -145,6 +217,69 @@ class Runtime {
           let arg = this.evalExpr(expr.args[i])
           print(arg.toString())
           i = i + 1
+        }
+        return 0
+      }
+
+      // Serial 통신 함수들
+      if expr.name == "serial_open" {
+        let port = this.evalExpr(expr.args[0]).toString()
+        let baudrate = this.evalExpr(expr.args[1])
+        let serial = Serial(port, baudrate)
+        if serial.open() {
+          this.serials[port] = serial
+          return 1
+        }
+        return 0
+      }
+
+      if expr.name == "serial_write" {
+        let port = this.evalExpr(expr.args[0]).toString()
+        let data = this.evalExpr(expr.args[1]).toString()
+        if this.serials[port] != null {
+          let serial = this.serials[port]
+          if serial.write(data) {
+            return 1
+          }
+        }
+        return 0
+      }
+
+      if expr.name == "serial_read" {
+        let port = this.evalExpr(expr.args[0]).toString()
+        if this.serials[port] != null {
+          let serial = this.serials[port]
+          return serial.read()
+        }
+        return ""
+      }
+
+      if expr.name == "serial_available" {
+        let port = this.evalExpr(expr.args[0]).toString()
+        if this.serials[port] != null {
+          let serial = this.serials[port]
+          return serial.available()
+        }
+        return 0
+      }
+
+      if expr.name == "serial_close" {
+        let port = this.evalExpr(expr.args[0]).toString()
+        if this.serials[port] != null {
+          let serial = this.serials[port]
+          serial.close()
+          return 1
+        }
+        return 0
+      }
+
+      if expr.name == "serial_is_open" {
+        let port = this.evalExpr(expr.args[0]).toString()
+        if this.serials[port] != null {
+          let serial = this.serials[port]
+          if serial.is_connected() {
+            return 1
+          }
         }
         return 0
       }
