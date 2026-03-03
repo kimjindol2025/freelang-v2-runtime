@@ -1,0 +1,86 @@
+// FreeLang v2 Runtime (자기 언어로 구현)
+// 메인 런타임: Lexer → Parser → Evaluator
+
+use "lexer" as Lexer
+use "parser" as Parser
+use "evaluator" as Runtime
+
+class FreeLangRuntime {
+  fn run(source_code: Str): void {
+    print("═══════════════════════════════════════════════════════")
+    print("FreeLang v2 Runtime (Pure FreeLang Implementation)")
+    print("═══════════════════════════════════════════════════════\n")
+
+    // 1. Lexical Analysis
+    print("📝 Phase 1: Lexical Analysis (Tokenization)")
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+
+    let lexer = Lexer.Lexer(source_code)
+    let tokens = lexer.tokenize()
+
+    print("Tokens: " + tokens.length)
+    let i = 0
+    while i < tokens.length && i < 10 {
+      print("  " + tokens[i].toString())
+      i = i + 1
+    }
+    if tokens.length > 10 {
+      print("  ... (" + (tokens.length - 10) + " more)")
+    }
+    print()
+
+    // 2. Syntactic Analysis
+    print("📝 Phase 2: Syntactic Analysis (Parsing)")
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+
+    let parser = Parser.Parser(tokens)
+    let program = parser.parse()
+
+    print("Statements: " + program.statements.length)
+    let j = 0
+    while j < program.statements.length {
+      print("  Statement " + j + ": " + program.statements[j].type)
+      j = j + 1
+    }
+    print()
+
+    // 3. Execution
+    print("📝 Phase 3: Execution (Evaluation)")
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+
+    let runtime = Runtime.Runtime()
+    runtime.eval(program)
+
+    print()
+    print("═══════════════════════════════════════════════════════")
+    print("✅ Execution completed!")
+    print("═══════════════════════════════════════════════════════")
+  }
+}
+
+fn main(): void {
+  // 테스트 프로그램
+  let code = "
+    fn hello(): void {
+      let x = 42
+      let y = 10
+      let z = x + y
+      print(\"Hello from FreeLang Runtime!\")
+      print(\"x = \")
+      print(x)
+      print(\"y = \")
+      print(y)
+      print(\"x + y = \")
+      print(z)
+    }
+
+    fn main(): void {
+      print(\"Starting FreeLang Program\")
+      hello()
+      print(\"Program finished\")
+    }
+  "
+
+  let runtime = FreeLangRuntime()
+  runtime.run(code)
+}

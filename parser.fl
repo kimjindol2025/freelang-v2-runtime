@@ -1,0 +1,369 @@
+// FreeLang v2 Parser (자기 언어로 구현)
+// 토큰 → AST (Abstract Syntax Tree) 변환
+
+// ═══════════════════════════════════════════════════════
+// AST 노드
+// ═══════════════════════════════════════════════════════
+
+class ASTNode {
+  type: Str  // "program", "function", "variable", etc
+}
+
+class Program {
+  statements: Array<ASTNode>
+
+  fn new(): Program {
+    this.statements = []
+    return this
+  }
+}
+
+class FunctionDef {
+  name: Str
+  params: Array<Str>
+  body: Array<ASTNode>
+  return_type: Str
+
+  fn new(name: Str): FunctionDef {
+    this.name = name
+    this.params = []
+    this.body = []
+    this.return_type = "void"
+    return this
+  }
+}
+
+class VariableDef {
+  name: Str
+  value: ASTNode
+  var_type: Str
+
+  fn new(name: Str, value: ASTNode): VariableDef {
+    this.name = name
+    this.value = value
+    this.var_type = "any"
+    return this
+  }
+}
+
+class BinaryOp {
+  op: Str     // "+", "-", "*", "==", "<", etc
+  left: ASTNode
+  right: ASTNode
+
+  fn new(op: Str, left: ASTNode, right: ASTNode): BinaryOp {
+    this.op = op
+    this.left = left
+    this.right = right
+    return this
+  }
+}
+
+class FunctionCall {
+  name: Str
+  args: Array<ASTNode>
+
+  fn new(name: Str): FunctionCall {
+    this.name = name
+    this.args = []
+    return this
+  }
+}
+
+class IntLiteral {
+  value: Int
+
+  fn new(value: Int): IntLiteral {
+    this.value = value
+    return this
+  }
+}
+
+class StringLiteral {
+  value: Str
+
+  fn new(value: Str): StringLiteral {
+    this.value = value
+    return this
+  }
+}
+
+class Identifier {
+  name: Str
+
+  fn new(name: Str): Identifier {
+    this.name = name
+    return this
+  }
+}
+
+class IfStatement {
+  condition: ASTNode
+  then_body: Array<ASTNode>
+  else_body: Array<ASTNode>
+
+  fn new(condition: ASTNode): IfStatement {
+    this.condition = condition
+    this.then_body = []
+    this.else_body = []
+    return this
+  }
+}
+
+class WhileLoop {
+  condition: ASTNode
+  body: Array<ASTNode>
+
+  fn new(condition: ASTNode): WhileLoop {
+    this.condition = condition
+    this.body = []
+    return this
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// 파서
+// ═══════════════════════════════════════════════════════
+
+class Parser {
+  tokens: Array<Token>
+  pos: Int
+
+  fn new(tokens: Array<Token>): Parser {
+    this.tokens = tokens
+    this.pos = 0
+    return this
+  }
+
+  fn parse(): Program {
+    let program = Program()
+
+    while !this.isAtEnd() {
+      if this.peek().type == TokenType.FN {
+        program.statements.push(this.parseFunctionDef())
+      } else if this.peek().type == TokenType.LET {
+        program.statements.push(this.parseVariableDef())
+      } else {
+        this.advance()
+      }
+    }
+
+    return program
+  }
+
+  fn parseFunctionDef(): FunctionDef {
+    this.consume(TokenType.FN)
+    let name = this.consume(TokenType.IDENTIFIER).value
+
+    this.consume(TokenType.LPAREN)
+    let params: Array<Str> = []
+    while this.peek().type != TokenType.RPAREN {
+      params.push(this.consume(TokenType.IDENTIFIER).value)
+      if this.peek().type == TokenType.COMMA {
+        this.advance()
+      }
+    }
+    this.consume(TokenType.RPAREN)
+
+    this.consume(TokenType.LBRACE)
+    let func_def = FunctionDef(name)
+    func_def.params = params
+
+    while this.peek().type != TokenType.RBRACE {
+      if this.peek().type == TokenType.LET {
+        func_def.body.push(this.parseVariableDef())
+      } else if this.peek().type == TokenType.IF {
+        func_def.body.push(this.parseIfStatement())
+      } else if this.peek().type == TokenType.WHILE {
+        func_def.body.push(this.parseWhileLoop())
+      } else if this.peek().type == TokenType.RETURN {
+        this.advance()
+        func_def.body.push(this.parseExpression())
+        if this.peek().type == TokenType.SEMICOLON {
+          this.advance()
+        }
+      } else {
+        this.advance()
+      }
+    }
+
+    this.consume(TokenType.RBRACE)
+    return func_def
+  }
+
+  fn parseVariableDef(): VariableDef {
+    this.consume(TokenType.LET)
+    let name = this.consume(TokenType.IDENTIFIER).value
+
+    this.consume(TokenType.ASSIGN)
+    let value = this.parseExpression()
+
+    if this.peek().type == TokenType.SEMICOLON {
+      this.advance()
+    }
+
+    return VariableDef(name, value)
+  }
+
+  fn parseIfStatement(): IfStatement {
+    this.consume(TokenType.IF)
+    let condition = this.parseExpression()
+
+    this.consume(TokenType.LBRACE)
+    let if_stmt = IfStatement(condition)
+
+    while this.peek().type != TokenType.RBRACE {
+      if this.peek().type == TokenType.LET {
+        if_stmt.then_body.push(this.parseVariableDef())
+      } else {
+        this.advance()
+      }
+    }
+
+    this.consume(TokenType.RBRACE)
+    return if_stmt
+  }
+
+  fn parseWhileLoop(): WhileLoop {
+    this.consume(TokenType.WHILE)
+    let condition = this.parseExpression()
+
+    this.consume(TokenType.LBRACE)
+    let while_loop = WhileLoop(condition)
+
+    while this.peek().type != TokenType.RBRACE {
+      if this.peek().type == TokenType.LET {
+        while_loop.body.push(this.parseVariableDef())
+      } else {
+        this.advance()
+      }
+    }
+
+    this.consume(TokenType.RBRACE)
+    return while_loop
+  }
+
+  fn parseExpression(): ASTNode {
+    return this.parseComparison()
+  }
+
+  fn parseComparison(): ASTNode {
+    let expr = this.parseAddition()
+
+    while this.peek().type == TokenType.EQ ||
+          this.peek().type == TokenType.NE ||
+          this.peek().type == TokenType.LT ||
+          this.peek().type == TokenType.GT ||
+          this.peek().type == TokenType.LE ||
+          this.peek().type == TokenType.GE {
+      let op = this.advance().value
+      let right = this.parseAddition()
+      expr = BinaryOp(op, expr, right)
+    }
+
+    return expr
+  }
+
+  fn parseAddition(): ASTNode {
+    let expr = this.parseMultiplication()
+
+    while this.peek().type == TokenType.PLUS ||
+          this.peek().type == TokenType.MINUS {
+      let op = this.advance().value
+      let right = this.parseMultiplication()
+      expr = BinaryOp(op, expr, right)
+    }
+
+    return expr
+  }
+
+  fn parseMultiplication(): ASTNode {
+    let expr = this.parsePrimary()
+
+    while this.peek().type == TokenType.STAR ||
+          this.peek().type == TokenType.SLASH {
+      let op = this.advance().value
+      let right = this.parsePrimary()
+      expr = BinaryOp(op, expr, right)
+    }
+
+    return expr
+  }
+
+  fn parsePrimary(): ASTNode {
+    let token = this.peek()
+
+    if token.type == TokenType.INT_LITERAL {
+      this.advance()
+      return IntLiteral(token.value.toInt())
+    }
+
+    if token.type == TokenType.STR_LITERAL {
+      this.advance()
+      return StringLiteral(token.value)
+    }
+
+    if token.type == TokenType.TRUE {
+      this.advance()
+      return BinaryOp("==", IntLiteral(1), IntLiteral(1))
+    }
+
+    if token.type == TokenType.FALSE {
+      this.advance()
+      return BinaryOp("!=", IntLiteral(1), IntLiteral(1))
+    }
+
+    if token.type == TokenType.IDENTIFIER {
+      let name = this.advance().value
+
+      if this.peek().type == TokenType.LPAREN {
+        this.advance()
+        let func_call = FunctionCall(name)
+
+        while this.peek().type != TokenType.RPAREN {
+          func_call.args.push(this.parseExpression())
+          if this.peek().type == TokenType.COMMA {
+            this.advance()
+          }
+        }
+
+        this.consume(TokenType.RPAREN)
+        return func_call
+      }
+
+      return Identifier(name)
+    }
+
+    if token.type == TokenType.LPAREN {
+      this.advance()
+      let expr = this.parseExpression()
+      this.consume(TokenType.RPAREN)
+      return expr
+    }
+
+    return IntLiteral(0)
+  }
+
+  fn peek(): Token {
+    if this.pos >= this.tokens.length {
+      return this.tokens[this.tokens.length - 1]
+    }
+    return this.tokens[this.pos]
+  }
+
+  fn advance(): Token {
+    let token = this.peek()
+    this.pos = this.pos + 1
+    return token
+  }
+
+  fn consume(expected_type: TokenType): Token {
+    let token = this.peek()
+    this.advance()
+    return token
+  }
+
+  fn isAtEnd(): Bool {
+    return this.peek().type == TokenType.EOF
+  }
+}

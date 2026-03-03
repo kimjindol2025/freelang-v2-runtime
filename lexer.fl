@@ -1,0 +1,316 @@
+// FreeLang v2 Lexer (자기 언어로 구현)
+// 소스 코드 → 토큰 변환
+
+enum TokenType {
+  // 리터럴
+  INT_LITERAL
+  STR_LITERAL
+  BOOL_LITERAL
+
+  // 식별자
+  IDENTIFIER
+
+  // 키워드
+  FN
+  IF
+  ELSE
+  WHILE
+  FOR
+  LET
+  RETURN
+  TRUE
+  FALSE
+
+  // 연산자
+  PLUS
+  MINUS
+  STAR
+  SLASH
+  EQ
+  NE
+  LT
+  GT
+  LE
+  GE
+  ASSIGN
+
+  // 구분자
+  LPAREN      // (
+  RPAREN      // )
+  LBRACE      // {
+  RBRACE      // }
+  SEMICOLON
+  COLON
+  COMMA
+  DOT
+
+  // 특수
+  EOF
+  NEWLINE
+}
+
+class Token {
+  type: TokenType
+  value: Str
+  line: Int
+  col: Int
+
+  fn new(type: TokenType, value: Str, line: Int, col: Int): Token {
+    this.type = type
+    this.value = value
+    this.line = line
+    this.col = col
+    return this
+  }
+
+  fn toString(): Str {
+    return "[" + this.line + ":" + this.col + "] " +
+           this.type.toString() + " = " + this.value
+  }
+}
+
+class Lexer {
+  source: Str
+  pos: Int
+  line: Int
+  col: Int
+  tokens: Array<Token>
+
+  fn new(source: Str): Lexer {
+    this.source = source
+    this.pos = 0
+    this.line = 1
+    this.col = 1
+    this.tokens = []
+    return this
+  }
+
+  fn tokenize(): Array<Token> {
+    while this.pos < this.source.length {
+      this.scanToken()
+    }
+
+    this.tokens.push(Token(TokenType.EOF, "", this.line, this.col))
+    return this.tokens
+  }
+
+  fn scanToken(): void {
+    let ch = this.peek()
+
+    // 공백 무시
+    if ch == " " || ch == "\t" {
+      this.advance()
+      return
+    }
+
+    // 줄바꿈
+    if ch == "\n" {
+      this.advance()
+      this.line = this.line + 1
+      this.col = 1
+      return
+    }
+
+    // 주석
+    if ch == "/" && this.peekNext() == "/" {
+      this.skipComment()
+      return
+    }
+
+    // 문자열
+    if ch == "\"" {
+      this.scanString()
+      return
+    }
+
+    // 숫자
+    if this.isDigit(ch) {
+      this.scanNumber()
+      return
+    }
+
+    // 식별자/키워드
+    if this.isAlpha(ch) {
+      this.scanIdentifier()
+      return
+    }
+
+    // 연산자/구분자
+    this.scanOperator()
+  }
+
+  fn scanString(): void {
+    let startLine = this.line
+    let startCol = this.col
+    this.advance()  // "
+
+    let value = ""
+    while this.pos < this.source.length && this.peek() != "\"" {
+      value = value + this.peek()
+      this.advance()
+    }
+
+    this.advance()  // "
+    this.tokens.push(Token(TokenType.STR_LITERAL, value, startLine, startCol))
+  }
+
+  fn scanNumber(): void {
+    let startLine = this.line
+    let startCol = this.col
+    let value = ""
+
+    while this.pos < this.source.length && this.isDigit(this.peek()) {
+      value = value + this.peek()
+      this.advance()
+    }
+
+    this.tokens.push(Token(TokenType.INT_LITERAL, value, startLine, startCol))
+  }
+
+  fn scanIdentifier(): void {
+    let startLine = this.line
+    let startCol = this.col
+    let value = ""
+
+    while this.pos < this.source.length && (this.isAlphaNum(this.peek()) || this.peek() == "_") {
+      value = value + this.peek()
+      this.advance()
+    }
+
+    // 키워드 확인
+    let tokenType = this.getKeywordType(value)
+    if tokenType != null {
+      this.tokens.push(Token(tokenType, value, startLine, startCol))
+    } else {
+      this.tokens.push(Token(TokenType.IDENTIFIER, value, startLine, startCol))
+    }
+  }
+
+  fn scanOperator(): void {
+    let ch = this.peek()
+    let startLine = this.line
+    let startCol = this.col
+
+    if ch == "+" {
+      this.advance()
+      this.tokens.push(Token(TokenType.PLUS, "+", startLine, startCol))
+    } else if ch == "-" {
+      this.advance()
+      this.tokens.push(Token(TokenType.MINUS, "-", startLine, startCol))
+    } else if ch == "*" {
+      this.advance()
+      this.tokens.push(Token(TokenType.STAR, "*", startLine, startCol))
+    } else if ch == "/" {
+      this.advance()
+      this.tokens.push(Token(TokenType.SLASH, "/", startLine, startCol))
+    } else if ch == "=" {
+      this.advance()
+      if this.peek() == "=" {
+        this.advance()
+        this.tokens.push(Token(TokenType.EQ, "==", startLine, startCol))
+      } else {
+        this.tokens.push(Token(TokenType.ASSIGN, "=", startLine, startCol))
+      }
+    } else if ch == "!" {
+      this.advance()
+      if this.peek() == "=" {
+        this.advance()
+        this.tokens.push(Token(TokenType.NE, "!=", startLine, startCol))
+      }
+    } else if ch == "<" {
+      this.advance()
+      if this.peek() == "=" {
+        this.advance()
+        this.tokens.push(Token(TokenType.LE, "<=", startLine, startCol))
+      } else {
+        this.tokens.push(Token(TokenType.LT, "<", startLine, startCol))
+      }
+    } else if ch == ">" {
+      this.advance()
+      if this.peek() == "=" {
+        this.advance()
+        this.tokens.push(Token(TokenType.GE, ">=", startLine, startCol))
+      } else {
+        this.tokens.push(Token(TokenType.GT, ">", startLine, startCol))
+      }
+    } else if ch == "(" {
+      this.advance()
+      this.tokens.push(Token(TokenType.LPAREN, "(", startLine, startCol))
+    } else if ch == ")" {
+      this.advance()
+      this.tokens.push(Token(TokenType.RPAREN, ")", startLine, startCol))
+    } else if ch == "{" {
+      this.advance()
+      this.tokens.push(Token(TokenType.LBRACE, "{", startLine, startCol))
+    } else if ch == "}" {
+      this.advance()
+      this.tokens.push(Token(TokenType.RBRACE, "}", startLine, startCol))
+    } else if ch == ";" {
+      this.advance()
+      this.tokens.push(Token(TokenType.SEMICOLON, ";", startLine, startCol))
+    } else if ch == ":" {
+      this.advance()
+      this.tokens.push(Token(TokenType.COLON, ":", startLine, startCol))
+    } else if ch == "," {
+      this.advance()
+      this.tokens.push(Token(TokenType.COMMA, ",", startLine, startCol))
+    } else if ch == "." {
+      this.advance()
+      this.tokens.push(Token(TokenType.DOT, ".", startLine, startCol))
+    } else {
+      this.advance()
+    }
+  }
+
+  fn skipComment(): void {
+    while this.pos < this.source.length && this.peek() != "\n" {
+      this.advance()
+    }
+  }
+
+  fn getKeywordType(word: Str): TokenType {
+    if word == "fn" { return TokenType.FN }
+    if word == "if" { return TokenType.IF }
+    if word == "else" { return TokenType.ELSE }
+    if word == "while" { return TokenType.WHILE }
+    if word == "for" { return TokenType.FOR }
+    if word == "let" { return TokenType.LET }
+    if word == "return" { return TokenType.RETURN }
+    if word == "true" { return TokenType.TRUE }
+    if word == "false" { return TokenType.FALSE }
+    return null
+  }
+
+  fn peek(): Str {
+    if this.pos >= this.source.length {
+      return "\0"
+    }
+    return this.source[this.pos]
+  }
+
+  fn peekNext(): Str {
+    if this.pos + 1 >= this.source.length {
+      return "\0"
+    }
+    return this.source[this.pos + 1]
+  }
+
+  fn advance(): void {
+    if this.pos < this.source.length {
+      this.pos = this.pos + 1
+      this.col = this.col + 1
+    }
+  }
+
+  fn isDigit(ch: Str): Bool {
+    return ch >= "0" && ch <= "9"
+  }
+
+  fn isAlpha(ch: Str): Bool {
+    return (ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z")
+  }
+
+  fn isAlphaNum(ch: Str): Bool {
+    return this.isAlpha(ch) || this.isDigit(ch)
+  }
+}
